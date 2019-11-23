@@ -1,0 +1,10 @@
+.topbanniere{
+    background-color: #C4C5C7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.connexion{
+    display:flex;
+}

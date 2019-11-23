@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg">
         <a href="index.php"><img src="img/logo accueil.png" width="50" height="30"></a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
@@ -9,10 +9,10 @@
                 <a class="nav-link" href="#">Continuer une partie</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Forum</a>
+              <a class="nav-link" href="#">Glossaire</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Index</a>
+              <a class="nav-link" href="#">Forum</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Contact</a>

@@ -1,10 +1,24 @@
 .topbanniere{
-    background-color: #C4C5C7;
+    background-color: #4B4B4D;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.logo{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.navbar{
+    background-color: #EFB200;
+    border-style: inset outset;
+}
 
 .connexion{
     display:flex;
+}
+
+.inscription{
+    display: flex; 
+    flex-direction: column;
+    margin-left: 2em;
 }

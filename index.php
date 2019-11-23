@@ -12,7 +12,7 @@
 <body>
     <header>
         <div class="topbanniere">
-            <img src="MotifBanniere.png">
+            <img class="logo" src="MotifBanniere.png">
         </div>
     </header>
 <?php include("navbar.php")?>

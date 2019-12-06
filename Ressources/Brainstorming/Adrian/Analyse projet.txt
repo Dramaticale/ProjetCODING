@@ -8,12 +8,12 @@ Utilisateurs :
         - Créer topic
         - Supprimer topic
         - Modifier topic
+        - Créer catégories
+        - Supprimer catégories
+        - Modifier catégories
         - Créer sections
         - Supprimer sections
         - Modifier sections
-        - Créer sous-sections
-        - Supprimer sous-sections
-        - Modifier sous-sections
         - Bannir utilisateurs
         - Débannir utilisateurs
         - Voir les signalements
@@ -27,9 +27,9 @@ Utilisateurs :
         - Créer topic
         - Supprimer topic
         - Modifier topic
-        - Créer sous-sections
-        - Supprimer sous-sections
-        - Modifier sous-sections
+        - Créer sections
+        - Supprimer sections
+        - Modifier sections
         - Bannir utilisateurs
         - Débannir utilisateurs
         - Voir les signalements

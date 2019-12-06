@@ -1,0 +1,55 @@
+Utilisateurs :
+
+    - Administrateur
+        - Voir messages
+        - Ecrire messages
+        - Modifier messages
+        - Suppprimer messages
+        - Créer topic
+        - Supprimer topic
+        - Modifier topic
+        - Créer sections
+        - Supprimer sections
+        - Modifier sections
+        - Créer sous-sections
+        - Supprimer sous-sections
+        - Modifier sous-sections
+        - Bannir utilisateurs
+        - Débannir utilisateurs
+        - Voir les signalements
+        - Attribuer rôles
+
+    - Grands modérateurs
+        - Voir messages
+        - Ecrire messages
+        - Modifier messages
+        - Suppprimer messages
+        - Créer topic
+        - Supprimer topic
+        - Modifier topic
+        - Créer sous-sections
+        - Supprimer sous-sections
+        - Modifier sous-sections
+        - Bannir utilisateurs
+        - Débannir utilisateurs
+        - Voir les signalements
+
+    - Modérateur
+        - Voir messages
+        - Ecrire messages
+        - Modifier messages
+        - Suppprimer messages
+        - Créer topic
+        - Supprimer topic
+        - Modifier topic
+        - Bannir utilisateurs
+        - Débannir utilisateurs
+        - Voir les signalements
+
+    - Membre
+        - Voir messages
+        - Ecrire messages
+        - Modifier messages
+        - Créer topic
+        - Modifier topic
+        - Signaler messages

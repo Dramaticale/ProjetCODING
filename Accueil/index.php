@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <?php include ("../Ressources/Commun/Banniere.html") ?>
+        <?php include("../Ressources/Commun/banniere.html") ?>
     </header>
     <?php include("../Ressources/Commun/navbar.php") ?>
     <div class="connexion">
@@ -25,5 +25,5 @@
         </div>
     </div>
 </body>
-<?php include("../Ressources/Commun/Footer.html") ?>
+<?php include("../Ressources/Commun/footer.html") ?>
 </html>

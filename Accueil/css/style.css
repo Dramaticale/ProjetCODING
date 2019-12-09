@@ -15,6 +15,9 @@
 
 .connexion{
     display:flex;
+    flex-content: column;
+    align-content: end;
+    border: black;
 }
 
 .inscription{

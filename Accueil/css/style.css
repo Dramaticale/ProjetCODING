@@ -12,3 +12,26 @@
     background-color: #EFB200;
     border-style: inset outset;
 }
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+.texte{
+    width: 75%;
+}
+.card{
+    width: 30%;
+    border: solid black 0.1em;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
+.connexion{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 20px 50px 20px;
+}
+.identifiant{
+    margin-bottom: 5px;
+}
+.motDePasse{
+    margin-bottom: 5px;
+}

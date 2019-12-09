@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Projet YSCHOOLS fin d'année">
     <link rel="stylesheet" href="css/bootstrap-4.3.1-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../Accueil/css/style.css">
     <title>Projet Yschools - Jeu de Rôles</title>
 </head>
 <body>
@@ -14,22 +14,28 @@
         <?php include("../Ressources/Commun/banniere.html") ?>
     </header>
     <?php include("../Ressources/Commun/navbar.php") ?>
-    <div class="connexion">
-        <form class="form-inline">
-            <div class="identifiant">
-                <input class="form-control mr-sm-2" type="text" placeholder="Identifiant">
+    <div class="container">
+        <div class="texte">
+            blablabla
+        </div>
+        <div class="card">
+            <div class="connexion">
+                <div class="identifiant">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Identifiant">
+                </div>
+                <div class="motDePasse">
+                    <input class="form-control mr-sm-2" type="password" placeholder="Mot de passe">
+                </div>
+                <div class="bouton">
+                    <button class="btn btn-primary" type="submit">Se connecter</button>
+                </div>
+                <div class="inscription">
+                    Pas de compte ? <a href="inscription.php">S'enregistrer</a>
+                </div>
             </div>
-            <div class="motDePasse">
-                <input class="form-control mr-sm-2" type="password" placeholder="Mot de passe">
-            </div>
-            <div class="bouton">
-                <button class="btn btn-primary" type="submit">Se connecter</button>
-            </div>
-            <div class="inscription">
-                Pas de compte ? <a href="inscription.php">S'enregistrer</a>
-            </div>
-        </form>
+        </div>
     </div>
+
 </body>
 <?php include("../Ressources/Commun/footer.html") ?>
 </html>

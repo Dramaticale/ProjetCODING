@@ -1,6 +1,6 @@
 <html>
 <head>
-    <link rel="stylesheet" href="../../Ressources/Commun/style.css"
+    <link rel="stylesheet" href="style.css"
 </head>
 <nav class="navbar navbar-expand-lg">
     <a class="nav-link" href="index.php">Accueil</a>

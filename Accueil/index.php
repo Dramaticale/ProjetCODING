@@ -16,13 +16,19 @@
     <?php include("../Ressources/Commun/navbar.php") ?>
     <div class="connexion">
         <form class="form-inline">
-            <input class="form-control mr-sm-2" type="text" placeholder="Identifiant">
-            <input class="form-control mr-sm-2" type="password" placeholder="Mot de passe">
-            <button class="btn btn-primary" type="submit">Se connecter</button>
+            <div class="identifiant">
+                <input class="form-control mr-sm-2" type="text" placeholder="Identifiant">
+            </div>
+            <div class="motDePasse">
+                <input class="form-control mr-sm-2" type="password" placeholder="Mot de passe">
+            </div>
+            <div class="bouton">
+                <button class="btn btn-primary" type="submit">Se connecter</button>
+            </div>
+            <div class="inscription">
+                Pas de compte ? <a href="inscription.php">S'enregistrer</a>
+            </div>
         </form>
-        <div class="inscription" style="color: white">
-            Pas de compte ? <a href="inscription.php">S'enregistrer</a>
-        </div>
     </div>
 </body>
 <?php include("../Ressources/Commun/footer.html") ?>

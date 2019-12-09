@@ -12,16 +12,3 @@
     background-color: #EFB200;
     border-style: inset outset;
 }
-
-.connexion{
-    display:flex;
-    flex-content: column;
-    align-content: end;
-    border: black;
-}
-
-.inscription{
-    display: flex; 
-    flex-direction: column;
-    margin-left: 2em;
-}

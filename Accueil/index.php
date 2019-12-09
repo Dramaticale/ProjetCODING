@@ -11,10 +11,25 @@
 </head>
 <body>
     <header>
-        <div class="topbanniere">
-            <img class="logo" src="MotifBanniere.png">
-        </div>
+        <?php include("../Ressources/Commun/banniere.html") ?>
     </header>
-<?php include("navbar.php")?>
+    <?php include("../Ressources/Commun/navbar.php") ?>
+    <div class="connexion">
+        <form class="form-inline">
+            <div class="identifiant">
+                <input class="form-control mr-sm-2" type="text" placeholder="Identifiant">
+            </div>
+            <div class="motDePasse">
+                <input class="form-control mr-sm-2" type="password" placeholder="Mot de passe">
+            </div>
+            <div class="bouton">
+                <button class="btn btn-primary" type="submit">Se connecter</button>
+            </div>
+            <div class="inscription">
+                Pas de compte ? <a href="inscription.php">S'enregistrer</a>
+            </div>
+        </form>
+    </div>
 </body>
+<?php include("../Ressources/Commun/footer.html") ?>
 </html>

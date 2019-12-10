@@ -42,7 +42,7 @@
                 <?php endif; ?>
                 <?php if(isset($_SESSION['check']) == 'log'): ?>
                     Bonjour !
-                    <button class="btn btn-primary"><a href="logout.php">Se déconnecter</a></button>
+                    <a href="logout.php">Se déconnecter</a>
                     </form>
                 <?php endif; ?>
                 </div>

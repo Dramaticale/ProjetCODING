@@ -34,7 +34,7 @@
                         </div>
                         <div class="bouton">
                             <button class="btn btn-primary" type="submit">Se connecter</button>
-                        </div>
+                        </div>    
                         <div class="inscription">
                             Pas de compte ? <a href="inscription.php">S'enregistrer</a>
                         </div>

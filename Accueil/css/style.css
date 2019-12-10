@@ -35,18 +35,3 @@
 .motDePasse{
     margin-bottom: 5px;
 }
-
-.containerInscription{
-    margin-top: 10%;
-    display: flex;
-    justify-content : center;
-    align-items : center;
-}
-
-.cardInscription{
-    Height : 120%;
-    width : 50%;
-    display: flex;
-    justify-content : center;
-    align-items : center;
-}

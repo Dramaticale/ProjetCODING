@@ -1,0 +1,20 @@
+.container{
+    margin-top: 10%;
+    display: flex;
+    justify-content : center;
+    align-items : center;
+}
+.card{
+    Height : 120%;
+    width : 50%;
+    display: flex;
+    justify-content : center;
+    align-items : center;
+}
+.card-body{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}

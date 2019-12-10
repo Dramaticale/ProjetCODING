@@ -21,8 +21,6 @@
       <div class="champs">
           <label for="username"></label>
           <input id="username" name="username" type="text" placeholder="Username" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-          <label for="email"></label>
-          <input id="email" name="email" type="text" placeholder="Email">
           <label for="password"></label>
           <input id="password" name="password" type="password" placeholder="Password">
           <label for="confirm_password"></label>

@@ -1,7 +1,7 @@
 <?php 
     session_start();
 
-    if(!isset($_POST['username']) || !isset($_POST['email']) || !isset($_POST['password']) || empty($_POST['username']) || empty($_POST['email']) || empty($_POST['password'])){
+    if(!isset($_POST['username']) || !isset($_POST['password']) || empty($_POST['username']) || empty($_POST['password'])){
         $_SESSION['inscriptionError'] = "Olala ! Certains champs sont vides !";
         header('Location: inscription.php');
         exit();
@@ -13,7 +13,6 @@
 
 //On affecte des variables pour une meilleure lisibilité
     $username = $_POST['username'];
-    $email = $_POST['email'];
     $password = $_POST['password'];
 
 //Test si les passwords correspondent
@@ -51,32 +50,11 @@
             }
     }
 
-//On test si l'email n'est pas déjà existant et est valide
-    if($email){
-        $emailCheck = 'SELECT email FROM user WHERE email=:email';
-        $requeteEmailCheck = $connexion->prepare($emailCheck);
-        $requeteEmailCheck->execute([':email'=>$email]);
-        $emailBon = $requeteEmailCheck->fetch(PDO::FETCH_ASSOC);
-            if($emailBon){
-                $_SESSION['inscriptionError'] = "E-mail déjà existant";
-                header('Location: inscription.php');
-                exit();
-            }
-    }
-
-    $email_pattern = '/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/i';
-    $email_ok = preg_match($email_pattern, $email);
-    if(!$email_ok){
-        $_SESSION['inscriptionError'] = 'E-mail incorrect';
-        header('Location: inscription.php');
-        exit();
-    }
-
 //On hash le password
     $password_hashed=password_hash($password, PASSWORD_BCRYPT, ["cost" => 10]);
 
 //On envoie notre requète, on envoie une variable de session de confirmation et on renvoie l'utilisateur sur la page login
-    $statement= 'INSERT INTO user(user.username, user.password, user.email) VALUES ("'.$username.'","'.$password_hashed.'","'.$email.'")';
+    $statement= 'INSERT INTO user(user.username, user.password) VALUES ("'.$username.'","'.$password_hashed.'")';
     $requete = $connexion->query($statement);
 
     $_SESSION['confirm'] = "Votre compte a été créé avec succès !";

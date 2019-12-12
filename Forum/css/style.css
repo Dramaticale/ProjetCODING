@@ -1,7 +1,33 @@
 .box-categorie {
-    color: blue;
+    background-color: #EFB200;
+    width: 50%;
+    border: 2px solid rgb(75, 75, 77);
+    border-bottom: 0px;
+    border-radius: 3em 3em 0em 0em;
+    margin-top: 2em;
+    padding-left: 0.9em;
+    font-size: 1.7em;
 }
 
 .box-section {
-    color: red;
+    background-color: rgba(75, 75, 77, 0);
+    border: 2px solid rgb(75, 75, 77);
+    transition: background-color 250ms 50ms, color 300ms;
+    padding-left: 0.9em;
+    font-size: 1.2em;
+}
+
+.box-section:hover {
+    background-color: rgba(75, 75, 77, 1);
+    color: white;
+}
+
+.box-section:nth-child(2) {
+    border-radius: 0em 3em 0em 0em;
+    border-bottom: 0px;
+}
+
+.box-section:last-child {
+    border-radius: 0em 0em 3em 3em;
+    border-top: 0px;
 }

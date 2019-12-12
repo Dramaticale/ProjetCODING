@@ -9,7 +9,7 @@ include('appelNoms.php')
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../Ressources/bootstrap-4.3.1-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../Ressources/commun/style.css">
+    <link rel="stylesheet" href="../Ressources/commun/styleCommun.css">
     <link rel="stylesheet" href="../Forum/css/styleForum.css">
     <title>Forum</title>
 </head>

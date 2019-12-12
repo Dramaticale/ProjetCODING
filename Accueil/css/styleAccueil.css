@@ -14,6 +14,12 @@
     border: solid black 0.1em;
     box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
 }
+footer{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    right:0;
+}
 .connexion{
     display: flex;
     flex-direction: column;

@@ -38,9 +38,10 @@ include('appelNoms.php')
 
     </main>
 
+
+
+</body>
 <?php
     include('../Ressources/Commun/footer.html');
 ?>
-
-</body>
 </html>

@@ -1,15 +1,37 @@
 .topbanniere {
-    background-color: #4B4B4D;
+    background: linear-gradient(#4E5566,#3A404D);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .navbar{
-    background-color: #EFB200;
-    border-style: inset outset;
+    height: 75px;
+    background: linear-gradient(#3A404D,#EFB200);
+    display: flex;
+    justify-content: center;
+    border-bottom: solid 1px grey;
 }
 .nav-link{
     color: black;
     display: flex;
+    justify-content: space-between;
+}
+footer{
+    margin-top:auto;
+    padding-top: 25px;
+    border-top: solid 1px grey;
+    background: linear-gradient(#4E5566,#3A404D);
+}
+
+.banniere-bottom{
+    display:flex;
+    align-items: center;
     justify-content: space-around;
+}
+.banniere-bottom2{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    text-align:center;
 }

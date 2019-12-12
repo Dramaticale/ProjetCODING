@@ -23,13 +23,13 @@
 
     if(password_verify($_POST['password'], $identifiant_username['password'])){
         $_SESSION['check'] = "log";
+        $_SESSION['username'] = $username;
         header('Location: index.php');
         exit;
     }else{
         header('Location: index.php');
-        $_SESSION['error'] = "Olala ! Certains champs sont incorrects !";
+        $_SESSION['error'] = "Nom d'utilisateur/Mot de passe incorrect";
         exit();
     }
-
     
 ?>

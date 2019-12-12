@@ -1,5 +1,6 @@
 <?php 
     session_start();
+    $_SESSION['error'] = "";
 ?>
 
 <!DOCTYPE html>
@@ -9,8 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Projet YSCHOOLS fin d'année">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="../Ressources/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styleAccueil.css">
     <title>Projet Yschools - Jeu de Rôles</title>
 </head>
 <body>
@@ -32,6 +33,9 @@
                         <div class="motDePasse">
                             <input class="form-control mr-sm-2" type="password" id ="password" name="password" placeholder="Mot de passe">
                         </div>
+                        <?php if(isset($_SESSION['error'])):?>
+                            <div class="error"><?= $_SESSION['error']?></div>
+                         <?php endif; ?>
                         <div class="bouton">
                             <button class="btn btn-primary" type="submit">Se connecter</button>
                         </div>    
@@ -41,7 +45,7 @@
                     <form>
                 <?php endif; ?>
                 <?php if(isset($_SESSION['check']) == 'log'): ?>
-                    Bonjour !
+                    Bonjour <?= $_SESSION['username'] ?> !
                     <a href="logout.php">Se déconnecter</a>
                     </form>
                 <?php endif; ?>

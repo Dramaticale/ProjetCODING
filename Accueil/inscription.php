@@ -7,8 +7,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/styleInscription.css">
     <link rel="stylesheet" href="../Ressources/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styleInscription.css">
 
     <title>Inscription JDR Coding</title>
 </head>
@@ -19,14 +19,14 @@
         <img src="MotifBanniere.png">
       <div class="card-body">
             <label for="username"></label>
-            <input id="username" name="username" type="text" placeholder="Username" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+            <input id="username" name="username" type="text" placeholder="Nom d'utilisateur" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
             <label for="password"></label>
-            <input id="password" name="password" type="password" placeholder="Password">
+            <input id="password" name="password" type="password" placeholder="Mot de passe">
             <label for="confirm_password"></label>
-            <input id="confirm_password" name="confirm_password" type="password" placeholder="Confirm password">
+            <input id="confirm_password" name="confirm_password" type="password" placeholder="Confirmer mot de passe">
             <?php if(isset($_SESSION['inscriptionError'])):?>
-            <div class="error"><?= $_SESSION['inscriptionError']?></div>
-          <?php endif; ?>
+              <div class="error"><?= $_SESSION['inscriptionError']?></div>
+            <?php endif; ?>
         </div>
         <div class="group_bouton">
             <button id="ajout" type="submit" class="btn btn-outline-secondary">S'inscrire</button>

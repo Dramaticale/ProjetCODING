@@ -8,3 +8,8 @@
     background-color: #EFB200;
     border-style: inset outset;
 }
+.nav-link{
+    color: black;
+    display: flex;
+    justify-content: space-around;
+}

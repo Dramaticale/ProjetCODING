@@ -1,6 +1,7 @@
 <html>
 <head>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../Ressources/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Ressources/Commun/styleCommun.css">
 </head>
 <nav class="navbar navbar-expand-lg">
     <a class="nav-link" href="index.php">Accueil</a>

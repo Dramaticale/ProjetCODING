@@ -22,10 +22,10 @@
         exit();
     }
 
-//Test si le password a 8 caracteres, 1 majuscule et 1 chiffre
-    $password_pattern='#^(?=.*[A-Z])(?=.*[0-9]).{8,}$#';
+//Test si le password a 5 caracteres, 1 majuscule et 1 chiffre
+    $password_pattern='#^(?=.*[A-Z])(?=.*[0-9]).{5,}$#';
     if(!preg_match($password_pattern, $password)) {
-        $_SESSION['inscriptionError'] = "Le mot de passe n'est pas conforme";
+        $_SESSION['inscriptionError'] = "Le mot de passe n'est pas conforme (1 majuscule, 1 chiffre et 5 caracteres minimum";
         header('Location: inscription.php');
         exit();
     }

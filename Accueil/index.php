@@ -18,10 +18,23 @@
         <?php include("../Ressources/Commun/banniere.html") ?>
     </header>
     <?php include("../Ressources/Commun/navbar.php") ?>
-    <div class="container">
-        <div class="card1">
-            blablabla
-        </div>
+    <div class="container <?= isset($_SESSION['check'])? 'session': null ?>">
+        <?php if(isset($_SESSION['check']) == null): ?>
+            <div class="card">
+                blablabla
+            </div>
+        <?php endif; ?>
+        <?php if(isset($_SESSION['check']) == 'log'): ?>
+            <div class="card">
+                blablabla1
+            </div>
+            <div class="card">
+                blablabla2
+            </div>
+            <div class="card">
+                blablabla3
+            </div>
+        <?php endif; ?>
         <div class="card">
             <div class="connexion">
             <?php if(isset($_SESSION['check']) == null): ?>
@@ -41,7 +54,6 @@
                     <div class="inscription">
                         Pas de compte ? <a href="inscription.php">S'enregistrer</a>
                     </div>
-                <form>
             <?php endif; ?>
             <?php if(isset($_SESSION['check']) == 'log'): ?>
                 Bonjour <?= $_SESSION['username'] ?> !

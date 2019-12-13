@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="28bcb0ee-b412-4927-a636-9512c0c8e38a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Accueil/css/styleAccueil.css" beforeDir="false" afterPath="$PROJECT_DIR$/Accueil/css/styleAccueil.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Accueil/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Accueil/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Accueil/inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/Accueil/inscription.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Accueil/postlogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/Accueil/postlogin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Commun/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/Commun/navbar.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +43,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -76,6 +75,9 @@
       <workItem from="1575882235209" duration="13797000" />
       <workItem from="1575903799378" duration="2089000" />
       <workItem from="1575974749774" duration="2627000" />
+      <workItem from="1576234832360" duration="14000" />
+      <workItem from="1576243510099" duration="38000" />
+      <workItem from="1576250651290" duration="1855000" />
     </task>
     <servers />
   </component>
@@ -83,9 +85,13 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="495" y="252" key="com.intellij.ide.util.TipDialog" timestamp="1575974750265">
+    <state x="580" y="184" key="FileChooserDialogImpl" timestamp="1576243544835">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="495" y="252" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1575974750265" />
+    <state x="580" y="184" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1576243544835" />
+    <state x="495" y="252" key="com.intellij.ide.util.TipDialog" timestamp="1576243510986">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="495" y="252" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1576243510986" />
   </component>
 </project>

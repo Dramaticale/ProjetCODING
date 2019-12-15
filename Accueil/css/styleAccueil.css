@@ -6,17 +6,20 @@
     display: flex;
     justify-content: space-between;
 }
-.container.session{
-    justify-content: flex-end;
+.containerArticle{
+    display: flex;
+    flex-direction: column;
 }
-.texte{
-    width: 75%;
+.containerArticle .card{
+    width: 100%;
 }
 .card{
     margin-top: 25px;
     width: 30%;
-    border: solid black 0.1em;
     box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
+.texte{
+    padding: 10px 5px 5px 10px;
 }
 footer{
     position: absolute;

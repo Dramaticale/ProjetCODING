@@ -18,21 +18,34 @@
         <?php include("../Ressources/Commun/banniere.html") ?>
     </header>
     <?php include("../Ressources/Commun/navbar.php") ?>
-    <div class="container <?= isset($_SESSION['check'])? 'session': null ?>">
+    <div class="container">
         <?php if(isset($_SESSION['check']) == null): ?>
             <div class="card">
-                blablabla
+                <div class="texte">
+                    blablabla
+                </div>
             </div>
         <?php endif; ?>
         <?php if(isset($_SESSION['check']) == 'log'): ?>
-            <div class="card">
-                blablabla1
-            </div>
-            <div class="card">
-                blablabla2
-            </div>
-            <div class="card">
-                blablabla3
+            <div class="containerArticle">
+                <div class="card">
+                    <div class="texte">
+                        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias amet asperiores blanditiis
+                            doloremque error esse fuga ipsum laborum minus odio odit omnis porro quaerat quo quod rerum,
+                            sunt suscipit vel!
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="texte">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A blanditiis consequatur, ipsum iure libero magnam minima neque odit officia officiis, omnis, placeat quas quibusdam quis sunt tempora vitae. Aut, soluta.
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="texte">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda commodi ducimus, et impedit inventore ipsum laboriosam nihil, porro possimus quibusdam quo, rem repudiandae sint voluptates voluptatibus voluptatum. Laudantium, quidem?
+                    </div>
+                </div>
             </div>
         <?php endif; ?>
         <div class="card">

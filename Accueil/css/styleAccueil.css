@@ -5,10 +5,12 @@
 .container{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 10%;
 }
 .containerArticle{
     display: flex;
     flex-direction: column;
+    width: 65%;
 }
 .containerArticle .card{
     width: 100%;
@@ -22,10 +24,10 @@
     padding: 10px 5px 5px 10px;
 }
 footer{
-    position: absolute;
-    bottom: 0;
-    left:0;
-    right:0;
+    margin-top:auto;
+    padding-top: 25px;
+    border-top: solid 1px grey;
+    background: linear-gradient(#4E5566,#3A404D);
 }
 .connexion{
     display: flex;
@@ -37,4 +39,18 @@ footer{
 }
 .motDePasse{
     margin-bottom: 5px;
+}
+.containerJeu{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.jeu{
+    display: flex;
+    justify-content: center;
+    height: 600px;
+    width: 1000px;
+    border: solid 5px black;
+    border-radius: 10%;
+    margin: 5% auto 5% auto;
 }

@@ -30,6 +30,7 @@
         </div>
         <div class="group_bouton">
             <button id="ajout" type="submit" class="btn btn-outline-secondary">S'inscrire</button>
+            <button type="button" class="btn btn-dark"><a href="index.php">Accueil</a></button>
         </div>
       </div>
     </div>

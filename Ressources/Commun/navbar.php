@@ -10,11 +10,14 @@
                     <a class="nav-link" href="../Accueil/index.php">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" id="wiki">Wiki</a>
+                    <a class="nav-link" href="../Accueil/wiki.php">Wiki</a>
                 </li>
             <?php if(isset($_SESSION['check']) == 'log'): ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Jeu</a>
+                    <a class="nav-link" href="../Accueil/jeu.php">Jeu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Accueil/journal.php">Journal</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../Forum/index.php">Forum</a>

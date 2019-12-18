@@ -76,7 +76,7 @@
             </div>
         </div>
     </div>
+    <?php include("../Ressources/Commun/footer.html") ?>
 </body>
-<?php include("../Ressources/Commun/footer.html") ?>
 </html>
 <?php $_SESSION['error'] = ''?>

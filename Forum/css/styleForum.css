@@ -1,3 +1,7 @@
+* {
+    text-decoration: none ;
+}
+
 .box-categorie {
     background-color: #EFB200;
     width: 50%;
@@ -12,8 +16,7 @@
 .box-section {
     background-color: rgba(75, 75, 77, 0);
     border: 2px solid rgb(75, 75, 77);
-    transition: background-color 250ms 50ms, color 300ms;
-    padding-left: 0.9em;
+    transition: background-color 260ms 40ms, color 300ms;
     font-size: 1.2em;
     cursor: pointer;
 }
@@ -21,6 +24,15 @@
 .box-section:hover {
     background-color: rgba(75, 75, 77, 1);
     color: white;
+}
+
+.box-section a {
+    color: rgb(75, 75, 77);
+}
+
+.box-section:hover a, .box-section a:hover {
+    color:white;
+    text-decoration: none !important;
 }
 
 .box-section:nth-child(2) {
@@ -34,4 +46,8 @@
 }
 .box-section:last-of-type {
     margin-bottom: 2em;
+}
+
+.section {
+    padding-left: 1.2em;
 }

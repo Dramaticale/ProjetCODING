@@ -1,5 +1,5 @@
 <?php
-include('appelIndex.php')
+include('appelSection.php')
 ?>
 
 <!DOCTYPE html>
@@ -11,33 +11,27 @@ include('appelIndex.php')
     <link rel="stylesheet" href="../Ressources/bootstrap-4.3.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../Ressources/commun/styleCommun.css">
     <link rel="stylesheet" href="../Forum/css/styleForum.css">
-    <title>Forum</title>
+    <title>Document</title>
 </head>
 <body>
 <?php
     include('../Ressources/Commun/banniere.html');
     include('../Ressources/Commun/navbar.php');
 ?>
-    <main>
 
-            <?php foreach ($nomsCategories as $nomCategorie) { ?>
+<main>
 
-                <div class="container">
+    <div class="container">
 
-                    <div class="box-categorie"><?=$nomCategorie?></div>
+        <div class="box-titre">
 
-                    <?php foreach ($nomsSections[$nomCategorie] as $nomSection) { ?>
+            
 
-                       <div class="box-section"><a href="./section.php?section=<?=$nomSection?>"><div class='section'><?=$nomSection?></div></a></div>
+        </div>
 
-                    <?php } ?>
+    </div>
 
-                </div>
-                
-            <?php } ?>
-
-    </main>
-
+</main>
 
 <?php
     include('../Ressources/Commun/footer.html');

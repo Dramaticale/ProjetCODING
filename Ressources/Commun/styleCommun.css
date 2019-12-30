@@ -12,10 +12,25 @@
     border-bottom: solid 1px grey;
 }
 .nav-link{
-    color: black;
-    display: flex;
-    justify-content: space-between;
+    color: white;
+    border: 1px white;
 }
+.nav-link:hover{
+    background: linear-gradient(#3A404D,#EFB200);
+    color: white;
+}
+ul > li > a{
+    font-size: 25px;
+}
+#navbarSupportedContent > ul > li.nav-item.deconnexion > a{
+    font-size: 15px;
+}
+#navbarSupportedContent > ul > li.nav-item.deconnexion{
+    position: absolute;
+    right:10px;
+    display: flex;
+    flex-direction: column;
+} 
 footer{
     margin-top:auto;
     padding-top: 25px;

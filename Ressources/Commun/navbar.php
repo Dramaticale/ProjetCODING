@@ -22,6 +22,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="../Forum/index.php">Forum</a>
                 </li>
+                <li class="nav-item deconnexion">
+                    Bonjour <?= $_SESSION['username'] ?> ! <a href="logout.php">Se déconnecter</a>
+                </li>
             <?php endif; ?>
         </ul>
     </div>

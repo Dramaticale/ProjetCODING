@@ -1,5 +1,5 @@
 <?php
-include('appelIndex.php')
+    include('appelIndex.php')
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +28,7 @@ include('appelIndex.php')
 
                     <?php foreach ($nomsSections[$nomCategorie] as $nomSection) { ?>
 
-                       <div class="box-section"><a href="./section.php?section=<?=$nomSection?>"><div class='section'><?=$nomSection?></div></a></div>
+                       <div class="box-link"><a href="./section.php?section=<?=$nomSection?>"><div class='link'><?=$nomSection?></div></a></div>
 
                     <?php } ?>
 

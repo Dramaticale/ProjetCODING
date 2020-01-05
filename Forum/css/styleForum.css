@@ -13,41 +13,51 @@
     font-size: 1.7em;
 }
 
-.box-section {
+.box-link {
     background-color: rgba(75, 75, 77, 0);
     border: 2px solid rgb(75, 75, 77);
     transition: background-color 260ms 40ms, color 300ms;
     font-size: 1.2em;
-    cursor: pointer;
 }
 
-.box-section:hover {
+.box-link:hover {
     background-color: rgba(75, 75, 77, 1);
     color: white;
 }
 
-.box-section a {
+.box-link a {
     color: rgb(75, 75, 77);
 }
 
-.box-section:hover a, .box-section a:hover {
+.box-link:hover a, .box-link a:hover {
     color:white;
     text-decoration: none !important;
 }
 
-.box-section:nth-child(2) {
+.box-link:nth-child(2) {
     border-radius: 0em 3em 0em 0em;
     border-bottom: 0px;
 }
 
-.box-section:last-child {
+.box-link:last-child {
     border-radius: 0em 0em 3em 3em;
     border-top: 0px;
 }
-.box-section:last-of-type {
+.box-link:last-of-type {
     margin-bottom: 2em;
 }
 
-.section {
+.link {
     padding-left: 1.2em;
+}
+
+.box-title-section {
+    background-color: #EFB200;
+    width: fit-content;
+    border: 2px solid rgb(75, 75, 77);
+    border-bottom: 0px;
+    border-radius: 3em 3em 0em 0em;
+    margin-top: 1.5em;
+    padding: 0 0.9em;
+    font-size: 2.3em;
 }

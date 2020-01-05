@@ -1,5 +1,5 @@
 <?php
-include('appelSection.php')
+    include('appelSection.php')
 ?>
 
 <!DOCTYPE html>
@@ -23,11 +23,14 @@ include('appelSection.php')
 
     <div class="container">
 
-        <div class="box-titre">
+        <div class="box-title-section">Sujets de <?=$_GET['section']?></div>
 
-            
+        <?php foreach ($nomsSujets as $nomSujets) {?>
 
-        </div>
+            <div class="box-link"><a href="#"><div class='link'><?=$nomSujets?></div></a></div>
+
+        <?php } ?>
+        
 
     </div>
 

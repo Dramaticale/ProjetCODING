@@ -3,11 +3,9 @@ Utilisateurs :
     - Administrateur
         - Voir messages
         - Ecrire messages
-        - Modifier messages
         - Suppprimer messages
         - Créer topic
         - Supprimer topic
-        - Modifier topic
         - Bannir utilisateurs
         - Débannir utilisateurs
         - Voir les signalements
@@ -28,7 +26,5 @@ Utilisateurs :
     - Membre
         - Voir messages
         - Ecrire messages
-        - Modifier messages
         - Créer topic
-        - Modifier topic
         - Signaler messages

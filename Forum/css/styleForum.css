@@ -61,3 +61,13 @@
     padding: 0 0.9em;
     font-size: 2.3em;
 }
+
+.box-title-topic {
+    background-color: #EFB200;
+    border: 2px solid rgb(75, 75, 77);
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    border-radius: 3em;
+    padding: 0 0.9em;
+    font-size: 2.3em;
+}

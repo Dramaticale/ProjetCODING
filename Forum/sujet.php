@@ -1,5 +1,5 @@
 <?php
-    include('appelSection.php')
+    include('appelSujet.php')
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../Ressources/bootstrap-4.3.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../Ressources/commun/styleCommun.css">
     <link rel="stylesheet" href="../Forum/css/styleForum.css">
-    <title><?=$_GET['section']?></title>
+    <title><?=$_GET['sujet']?></title>
 </head>
 <body>
 <?php
@@ -22,16 +22,9 @@
 <main>
 
     <div class="container">
-
-        <div class="box-title-section">Sujets de <?=$_GET['section']?></div>
-
-        <?php foreach ($nomsSujets as $nomSujets) {?>
-
-            <div class="box-link"><a href="./sujet.php?section=<?=$_GET['section']?>&sujet=<?=$nomSujets?>"><div class='link'><?=$nomSujets?></div></a></div>
-
-        <?php } ?>
-        
-
+    
+        <div class="box-title-topic"><?=$_GET['sujet']?></div>
+    
     </div>
 
 </main>

@@ -8,8 +8,7 @@
     }
 
 //On se connecte à la BDD
-    $connexion = new PDO('mysql:host=localhost;dbname=projetcoding;charset=utf8;','root',NULL);
-    $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    require('connexion.php');
 
 //On affecte des variables pour une meilleure lisibilité
     $username = $_POST['username'];

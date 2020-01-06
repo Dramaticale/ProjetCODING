@@ -15,7 +15,9 @@
 
 .box-link {
     background-color: rgba(75, 75, 77, 0);
-    border: 2px solid rgb(75, 75, 77);
+    border-top: 2px solid rgb(75, 75, 77);
+    border-left: 2px solid rgb(75, 75, 77);
+    border-right: 2px solid rgb(75, 75, 77);
     transition: background-color 260ms 40ms, color 300ms;
     font-size: 1.2em;
 }
@@ -36,12 +38,11 @@
 
 .box-link:nth-child(2) {
     border-radius: 0em 3em 0em 0em;
-    border-bottom: 0px;
 }
 
 .box-link:last-child {
     border-radius: 0em 0em 3em 3em;
-    border-top: 0px;
+    border-bottom: 2px solid rgb(75, 75, 77);
 }
 .box-link:last-of-type {
     margin-bottom: 2em;
@@ -65,9 +66,47 @@
 .box-title-topic {
     background-color: #EFB200;
     border: 2px solid rgb(75, 75, 77);
-    margin-top: 1.5em;
-    margin-bottom: 1em;
+    margin-top: 1.2em;
+    margin-bottom: 0.8em;
     border-radius: 3em;
     padding: 0 0.9em;
     font-size: 2.3em;
+}
+
+.box-message {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.4em;
+}
+
+.message-zone-infos {
+    width: 30%;
+    border: 2px solid rgb(75, 75, 77);
+    text-align: center;
+    border-radius: 3em 0em 0em 3em;
+}
+
+.message-zone-infos:nth-of-type(odd) {
+    background-color: #EFB200;
+}
+
+.message-zone-infos:nth-of-type(even) {
+    background-color: orangered;
+}
+
+.message-zone-texte {
+    width: 70%;
+    border-top: 2px solid rgb(75, 75, 77);
+    border-right: 2px solid rgb(75, 75, 77);
+    border-bottom: 2px solid rgb(75, 75, 77);
+    border-radius: 0em 3em 3em 0em;
+}
+
+.message-zone-texte:nth-of-type(odd) {
+    background-color: #EFB200;
+}
+
+.message-zone-texte:nth-of-type(even) {
+    background-color: orangered;
 }

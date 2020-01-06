@@ -23,7 +23,22 @@
 
     <div class="container">
     
-        <div class="box-title-topic"><?=$_GET['sujet']?></div>
+        <div class="box-title-topic"><?=$sujet[0]['titre']?></div>
+
+        <?php foreach ($tableauMessages as $tableauMessage) { ?>
+
+        <div class="box-message">
+        
+            <div class="message-zone-infos">
+                <div class="message-auteur"><?=$tableauMessage['auteur']?></div>
+                <div class="message-date"><?=$tableauMessage['dateMessage']?></div>
+            </div>
+
+            <div class="message-zone-texte"><?=$tableauMessage['texte']?></div>
+        
+        </div>
+
+        <?php } ?>
     
     </div>
 

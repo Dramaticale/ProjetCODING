@@ -22,12 +22,11 @@
 <main>
 
     <div class="container">
-
         <div class="box-title-section">Sujets de <?=$_GET['section']?></div>
 
         <?php foreach ($nomsSujets as $nomSujets) {?>
 
-            <div class="box-link"><a href="./sujet.php?section=<?=$_GET['section']?>&sujet=<?=$nomSujets?>"><div class='link'><?=$nomSujets?></div></a></div>
+            <div class="box-link"><a href="./sujet.php?section=<?=$_GET['section']?>&sujet=<?=$nomSujets['slug']?>"><div class='link'><?=$nomSujets['titre']?></div></a></div>
 
         <?php } ?>
         

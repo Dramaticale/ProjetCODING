@@ -31,14 +31,27 @@
         
             <div class="message-zone-infos">
                 <div class="message-auteur"><?=$tableauMessage['auteur']?></div>
-                <div class="message-date"><?=$tableauMessage['dateMessage']?></div>
+                <div class="message-date"><?=$date[$i]?></div>
             </div>
 
             <div class="message-zone-texte"><?=$tableauMessage['texte']?></div>
         
         </div>
 
-        <?php } ?>
+        <?php 
+        $i++;
+        } ?>
+
+        <form action="postSujet.php" method="POST" class="form-example">
+            
+            <div class="zone-answer">
+                <label for="answer">Répondre </label>
+                <textarea name="answer" id="answer" required></textarea>
+            </div>
+
+            <input type="submit" value="Envoyer">
+
+        </form>
     
     </div>
 

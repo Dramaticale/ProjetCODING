@@ -19,4 +19,19 @@ $titreSujet = $bdd->query("SELECT titre FROM sujets WHERE slug='{$_GET["sujet"]}
 
 $sujet = $titreSujet->fetchall(PDO::FETCH_ASSOC);
 
+$date = [];
+$i = 0;
+
+foreach ($tableauMessages as $tableauMessage) {
+
+    $resultat_dateheure = explode(' ', $tableauMessage['dateMessage']);
+    $resultat_date = explode('-', $resultat_dateheure[0]);
+    $resultat_heure = explode(':', $resultat_dateheure[1]);
+
+    $dateTexte = "Le " . $resultat_date[2] . "/" . $resultat_date[1] . "/" . $resultat_date[0] . " à " . $resultat_heure[0] . ":" . $resultat_heure[1];
+
+    array_push($date ,$dateTexte);
+
+}
+
 ?>

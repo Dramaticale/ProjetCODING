@@ -20,6 +20,7 @@
     border-right: 2px solid rgb(75, 75, 77);
     transition: background-color 260ms 40ms, color 300ms;
     font-size: 1.2em;
+    padding: 0 1em;
 }
 
 .box-link:hover {
@@ -46,10 +47,6 @@
 }
 .box-link:last-of-type {
     margin-bottom: 2em;
-}
-
-.link {
-    padding-left: 1.2em;
 }
 
 .box-title-section {
@@ -85,14 +82,7 @@
     border: 2px solid rgb(75, 75, 77);
     text-align: center;
     border-radius: 3em 0em 0em 3em;
-}
-
-.message-zone-infos:nth-of-type(odd) {
     background-color: #EFB200;
-}
-
-.message-zone-infos:nth-of-type(even) {
-    background-color: orangered;
 }
 
 .message-zone-texte {
@@ -101,12 +91,22 @@
     border-right: 2px solid rgb(75, 75, 77);
     border-bottom: 2px solid rgb(75, 75, 77);
     border-radius: 0em 3em 3em 0em;
-}
-
-.message-zone-texte:nth-of-type(odd) {
-    background-color: #EFB200;
-}
-
-.message-zone-texte:nth-of-type(even) {
+    padding: 1em;
     background-color: orangered;
+    word-wrap: break-word;
+}
+
+.message-auteur {
+    color: lightseagreen;
+    padding: 0.5em;
+    font-size: larger;
+}
+
+.message-date {
+    padding-bottom: 1em;
+}
+
+.box-link-text {
+    display: flex;
+    justify-content: space-between;
 }

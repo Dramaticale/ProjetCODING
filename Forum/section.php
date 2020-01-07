@@ -26,9 +26,18 @@
 
         <?php foreach ($nomsSujets as $nomSujets) {?>
 
-            <div class="box-link"><a href="./sujet.php?section=<?=$_GET['section']?>&sujet=<?=$nomSujets['slug']?>"><div class='link'><?=$nomSujets['titre']?></div></a></div>
+            <div class="box-link">
+                <a href="./sujet.php?section=<?=$_GET['section']?>&sujet=<?=$nomSujets['slug']?>">
+                    <div class='box-link-text'>
+                        <div><?=$nomSujets['titre']?></div>
+                        <div>Dernier message le <?=$date[$i]?></div>
+                    </div>
+                </a>
+            </div>
 
-        <?php } ?>
+        <?php 
+        $i++;
+        } ?>
         
 
     </div>

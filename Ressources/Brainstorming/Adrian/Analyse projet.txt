@@ -8,23 +8,18 @@ Utilisateurs :
         - Supprimer topic
         - Bannir utilisateurs
         - Débannir utilisateurs
-        - Voir les signalements
         - Attribuer rôles
 
     - Modérateur
         - Voir messages
         - Ecrire messages
-        - Modifier messages
         - Suppprimer messages
         - Créer topic
         - Supprimer topic
-        - Modifier topic
         - Bannir utilisateurs
         - Débannir utilisateurs
-        - Voir les signalements
 
     - Membre
         - Voir messages
         - Ecrire messages
         - Créer topic
-        - Signaler messages

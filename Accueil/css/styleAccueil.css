@@ -53,4 +53,9 @@ footer{
     border: solid 5px black;
     border-radius: 10%;
     margin: 5% auto 5% auto;
+    flex-direction: column;
+}
+.boutonChoix{
+    display: flex;
+    justify-content: center;
 }

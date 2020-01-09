@@ -1,7 +1,6 @@
 <?php
     session_start();
     $_SESSION['niveau']++;
-
     //si c'est un combat
 
     //si c'est une rencontre

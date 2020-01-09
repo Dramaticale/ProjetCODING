@@ -6,7 +6,7 @@ class PersoModel{
     public static function getPerso(Int $id){
         //select
         $db = Database::getDB();
-        $stat = "SELECT nom FROM perso WHERE perso.id = $id";
+        $stat = "SELECT nom, atq, vie FROM perso WHERE perso.id = $id";
         $req = $db->query($stat);
 
         return $req->fetch(PDO::FETCH_OBJ);
@@ -15,24 +15,28 @@ class PersoModel{
         //insert into
         $db = Database::getDB();
         $stat = "INSERT INTO perso (nom, atq, vie) VALUES (nom=:nom, atq=:atq, vie=:vie)";
-        $req = $db->query($stat);
+        $req = $db->prepare($stat);
+        $req->execute(
+            [
+                ':nom' => $perso->nom,
+            ]
+        )
 
-        return $req->fetch(PDO::FETCH_OBJ);
     }
     public static function savePerso(Personnage $perso){
         //update
         $db = Database::getDB();
-        $stat = "UPDATE perso SET vie:=vie, atq:=atq WHERE nom=$perso";
+        $stat = "UPDATE perso SET vie=$perso->vie, atq=$perso->atq WHERE id=$perso->id";
         $req = $db->query($stat);
 
-        return $req->fetch(PDO::FETCH_OBJ);
+        $req->execute();
     }
     public static function deletePerso(Personnage $perso){
         //delete
         $db = Database::getDB();
-        $stat = "DELETE FROM perso WHERE nom=$perso";
+        $stat = "DELETE FROM perso WHERE id=$perso->id";
         $req = $db->query($stat);
 
-        return $req->fetch(PDO::FETCH_OBJ);
+        $req->execute();
     }
 }

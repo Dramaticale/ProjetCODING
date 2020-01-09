@@ -6,7 +6,7 @@ class PersoModel{
     public static function getPerso(Int $id){
         //select
         $db = Database::getDB();
-        $stat = "SELECT nom, atq, vie FROM perso WHERE perso.id = $id";
+        $stat = 'SELECT * FROM perso INNER JOIN user_has_perso ON (perso.id = user_has_perso.perso_id) INNER JOIN user ON (user_has_perso.user_id = user.id) WHERE user.id = '. $id .'';
         $req = $db->query($stat);
 
         return $req->fetch(PDO::FETCH_OBJ);

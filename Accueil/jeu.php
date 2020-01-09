@@ -4,7 +4,7 @@
     require_once 'GameModel.php';
     require_once 'PersoModel.php';
     $_SESSION['niveau'] = !isset($_SESSION['niveau']) ? 0 : $_SESSION['niveau'];
-    $persoData = PersoModel::getPerso(6);
+    $persoData = PersoModel::getPerso($_SESSION['userID']['id']);
 
     var_dump($persoData);
     if($_SESSION['niveau'] < 3){

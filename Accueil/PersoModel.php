@@ -11,17 +11,20 @@ class PersoModel{
 
         return $req->fetch(PDO::FETCH_OBJ);
     }
-    public static function createPerso(Personnage $perso){
+    public static function createPerso(Int $userID, Personnage $perso){
         //insert into
         $db = Database::getDB();
         $stat = "INSERT INTO perso (nom, atq, vie) VALUES (nom=:nom, atq=:atq, vie=:vie)";
         $req = $db->prepare($stat);
         $req->execute(
             [
-                ':nom' => $perso->nom,
+                ':nom' => $perso->nom, ':atq' => $perso->atq, ':vie' => $perso->vie
             ]
-        )
-
+            );
+        $idUser = $db->lastInsertId();
+        $stat2 = "INSERT INTO user_has_perso (user_id, perso_id) VALUES ($userID,$idUser)";
+        $req2 = $db->prepare($stat2);
+        $req2->execute();
     }
     public static function savePerso(Personnage $perso){
         //update

@@ -48,14 +48,29 @@ footer{
 .jeu{
     display: flex;
     justify-content: center;
+    align-items: center;
     height: 600px;
     width: 1000px;
     border: solid 5px black;
     border-radius: 10%;
-    margin: 5% auto 5% auto;
+    margin: 5% auto 5% 10%;
     flex-direction: column;
+}
+.texteEvent{
+    margin-left: 1em;
 }
 .boutonChoix{
     display: flex;
     justify-content: center;
+}
+.infosPerso{
+    display: flex;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    border: solid 5px black;
+    border-radius: 10%;
+    margin: auto;
+    margin-right: 18%;
+    padding-left: 1em;
 }

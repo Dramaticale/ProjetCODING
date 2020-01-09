@@ -1,10 +1,12 @@
 <?php
     session_start();
-
+    require_once 'choixEvent.php';
     require_once 'GameModel.php';
     require_once 'PersoModel.php';
     $_SESSION['niveau'] = !isset($_SESSION['niveau']) ? 0 : $_SESSION['niveau'];
+    $persoData = PersoModel::getPerso(6);
 
+    var_dump($persoData);
     if($_SESSION['niveau'] < 3){
         // créer un entier aléatoire
         $random = mt_rand(1,3);
@@ -17,7 +19,6 @@
     }else{
         echo('Vous êtes mort...');
     }
-    var_dump($gameData);
 
 ?>
 <!doctype html>
@@ -54,16 +55,21 @@
             </div>
             <div class="boutonChoix">
             <form method="POST" action="consequence.php">
-            <?php if($_SESSION['niveau'] == 0): ?>
-                <button name="epee" id="armeDepart" type="submit"><?=$dataEpee['nom']?></button>
-                <button name="bouclier" id="armeDepart" type="submit"><?=$dataBouclier['nom']?></button>
-            <?php endif; ?>
-            <?php if($_SESSION['niveau'] == 1): ?>
-                <button name="epee" id="armeDepart" type="submit"><?=$gameData['choix']['0']->nom?></button>
-                <button name="bouclier" id="armeDepart" type="submit"><?=$gameData['choix']['1']->nom?></button>
-            <?php endif; ?>
+                <?php if($_SESSION['niveau'] == 0): ?>
+                    <button name="epee" id="armeDepart" type="submit"><?=$dataEpee['nom']?></button>
+                    <button name="bouclier" id="armeDepart" type="submit"><?=$dataBouclier['nom']?></button>
+                <?php endif; ?>
+                <?php if($_SESSION['niveau'] == 1): ?>
+                    <button name="epee" id="armeDepart" type="submit"><?=$gameData['choix']['0']->nom?></button>
+                    <button name="bouclier" id="armeDepart" type="submit"><?=$gameData['choix']['1']->nom?></button>
+                <?php endif; ?>
             </form>
             </div>
+        </div>
+        <div class="infosPerso">
+                Nom : <?=$persoData->nom?><br>
+                Attaque : <?=$persoData->atq?><br>
+                Vie : <?=$persoData->vie?>
         </div>
     </div>
     <?php include('../Ressources/Commun/footer.html')?>

@@ -34,4 +34,8 @@ foreach ($tableauMessages as $tableauMessage) {
 
 }
 
+if (!isset($_SESSION['errorAnswer'])) {
+    $_SESSION['errorAnswer'] = '';
+}
+
 ?>

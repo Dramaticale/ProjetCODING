@@ -1,5 +1,8 @@
 <?php
-    include('appelSujet.php')
+    include('appelSujet.php');
+
+    $_SESSION['section'] = $_GET["section"];
+    $_SESSION['slug'] = $_GET["sujet"];
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +14,7 @@
     <link rel="stylesheet" href="../Ressources/bootstrap-4.3.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../Ressources/commun/styleCommun.css">
     <link rel="stylesheet" href="../Forum/css/styleForum.css">
-    <title><?=$_GET['sujet']?></title>
+    <title><?=$sujet[0]['titre']?></title>
 </head>
 <body>
 <?php
@@ -39,17 +42,18 @@
         </div>
 
         <?php 
-        $i++;
+            $i++;
         } ?>
 
-        <form action="postSujet.php" method="POST" class="form-example">
+        <form action="postSujet.php" method="POST">
             
             <div class="zone-answer">
-                <label for="answer">Répondre </label>
-                <textarea name="answer" id="answer" required></textarea>
+                <div class="wrapper">
+                    <textarea name="answer" class="answer-topic" required></textarea>
+                    <input type="submit" id="submit-answer-topic" value="Répondre">
+                </div>
+                <div class="zone-error-sujet"><?=$_SESSION['errorAnswer']?></div>
             </div>
-
-            <input type="submit" value="Envoyer">
 
         </form>
     
@@ -59,6 +63,7 @@
 
 <?php
     include('../Ressources/Commun/footer.html');
+    $_SESSION['errorAnswer'] = '';
 ?>
 </body>
 </html>

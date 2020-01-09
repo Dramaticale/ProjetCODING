@@ -30,4 +30,8 @@ foreach ($nomsSujets as $nomSujets) {
 
 }
 
+if (!isset($_SESSION['error-creation-topic'])) {
+    $_SESSION['error-creation-topic'] = '';
+}
+
 ?>

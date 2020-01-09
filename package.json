@@ -1,0 +1,22 @@
+{
+  "name": "projetcoding",
+  "version": "1.0.0",
+  "description": "ProjetCODING",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dramaticale/ProjetCODING.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dramaticale/ProjetCODING/issues"
+  },
+  "homepage": "https://github.com/Dramaticale/ProjetCODING#readme",
+  "dependencies": {
+    "nightwatch": "^1.3.2"
+  }
+}

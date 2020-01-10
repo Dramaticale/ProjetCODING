@@ -1,6 +1,11 @@
 <?php
     session_start();
+
+    require_once 'Model/allModel.php';
+    
     $_SESSION['niveau']++;
+    $consData = GameModel::getConsequence();
+    var_dump($consData);
 
     //si c'est un combat
 
@@ -29,7 +34,7 @@
     <div class="containerJeu">
         <div class="jeu">
             <div class="texteEvent">
-
+                <?=$consData[0]->narration?>
             </div>
             <div class="boutonChoix">
                 <button><a href="jeu.php">Continuer</a></button>

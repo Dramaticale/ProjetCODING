@@ -8,6 +8,7 @@
     }
 
     $_SESSION['error']="";
+    $_SESSION['userID'] ="";
     $username = htmlspecialchars($_POST['username']);
     $password = htmlspecialchars($_POST['password']);
     
@@ -15,15 +16,19 @@
     $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $test_username= 'SELECT password FROM user WHERE username=:username';
-
     $requete = $connexion->prepare($test_username);
     $requete->execute([':username'=>$username]);
     $identifiant_username = $requete->fetch(PDO::FETCH_ASSOC);
 
+    $idUsername='SELECT id FROM user WHERE username=:username';
+    $req2 = $connexion->prepare($idUsername);
+    $req2->execute([':username'=>$username]);
+    $resultID = $req2->fetch(PDO::FETCH_ASSOC);
 
     if(password_verify($_POST['password'], $identifiant_username['password'])){
         $_SESSION['check'] = "log";
         $_SESSION['username'] = $username;
+        $_SESSION['userID'] = $resultID;
         header('Location: index.php');
         exit;
     }else{

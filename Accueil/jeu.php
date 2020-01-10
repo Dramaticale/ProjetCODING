@@ -1,31 +1,29 @@
 <?php
     session_start();
-    require('getEvent.php');
-    require('choixEvent.php');
-    require_once 'GameModel.php';
-    require_once 'PersoModel.php';
-    $_SESSION['niveau'] = !isset($_SESSION['niveau']) ? 1 : $_SESSION['niveau'];
+    require_once 'choixEvent.php';
+    require_once 'Model/allModel.php';
+    $_SESSION['niveau'] = !isset($_SESSION['niveau']) ? 0 : $_SESSION['niveau'];
+    $persoData = PersoModel::getPerso($_SESSION['userID']['id']);
 
-    if($_SESSION['niveau'] < 4){
+    if($_SESSION['niveau'] < 3){
         // créer un entier aléatoire
         $random = mt_rand(1,3);
         // recuperer evenement et choix
-        $gameData = GameModel::getGameData($random,1);
+        $gameData = GameModel::getGameData($random,$_SESSION['niveau']);
 
-    } elseif($_SESSION['niveau'] = 4) {
+    } elseif($_SESSION['niveau'] = 3) {
         // fin de partie
         echo('Vous avez triomphé ... Pour l\'instant');
     }else{
         echo('Vous êtes mort...');
     }
-    var_dump($gameData);
+
 ?>
 <!doctype html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../Ressources/bootstrap-4.3.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styleAccueil.css">
@@ -41,29 +39,34 @@
     <div class="containerJeu">
         <div class="jeu">
             <div class="texteEvent">
-            <?php if($_SESSION['niveau'] == 1): ?>
+            <?php if($_SESSION['niveau'] == 0): ?>
                 C'est votre premier jour de formation, vous êtes déjà installé quand votre professeur en chef Emelynx entre dans la pièce. Plus un bruit. La présentation se fait dans le calme. Vous avez hâte de commencer car c'est votre avenir qui est en jeu.<br>
                 Votre premier cours arrive, il est avec le professeur Florajax, un mage dôté d'un savoir immense, c'est lui qui vous enseignera comment être l'un des meilleurs.<br>
                 Le cours commence, après une première leçon sur le langage commun HTML, il décide de vous mettre à l'épreuve. Vous le voyez agiter ses mains tout en murmurant un dialecte ancien. Après quelques instants un portail apparaît et Florajax vous fait signe d'y entrer.<br>
                 Il fait sombre à l'intérieur. Soudain, vous entendez une petite voix, c'est celle de Florajax.<br>
                 "Tu apprends vite <?=$_SESSION['username']?>, je vais te mettre à l'épreuve. A ta droite il y a 2 objets, une épée et un bouclier, choisi bien, tu ne peux en prendre qu'un pour le début de ton aventure."<br>
             <?php endif; ?>
-            <?php if($_SESSION['niveau'] == 2): ?>
+            <?php if($_SESSION['niveau'] == 1): ?>
                 "Je pense que tout se passera bien pour toi. Tu es dans le chateau W3C, qui renferme un savoir colossal dans ses écrits, mais également abrite un bon nombre de monstre. Tu vas devoir aller chercher un livre, on raconte qu'il est gardé par un terrible monstre. Tu vas être livré à toi même, bonne chance." La voix se tue, vous n'entendez plus rien. Vous entamez votre route quand soudain <?= $gameData['evennement']->texte?>
             <?php endif; ?>
             </div>
             <div class="boutonChoix">
             <form method="POST" action="consequence.php">
-            <?php if($_SESSION['niveau'] == 1): ?>
-                <button name="epee" id="armeDepart" type="submit"><?=$dataEpee['nom']?></button>
-                <button name="bouclier" id="armeDepart" type="submit"><?=$dataBouclier['nom']?></button>
-            <?php endif; ?>
-            <?php if($_SESSION['niveau'] == 2): ?>
-                <button name="epee" id="armeDepart" type="submit"><?=$gameData['choix']['0']->nom?></button>
-                <button name="bouclier" id="armeDepart" type="submit"><?=$gameData['choix']['1']->nom?></button>
-            <?php endif; ?>
+                <?php if($_SESSION['niveau'] == 0): ?>
+                    <button name="epee" id="armeDepart" type="submit" value="1">épée</button>
+                    <button name="bouclier" id="armeDepart" type="submit" value="2">bouclier</button>
+                <?php endif; ?>
+                <?php if($_SESSION['niveau'] == 1): ?>
+                    <button name="choix1" id="armeDepart" type="submit"><?=$gameData['choix']['0']->nom?></button>
+                    <button name="choix2" id="armeDepart" type="submit"><?=$gameData['choix']['1']->nom?></button>
+                <?php endif; ?>
             </form>
             </div>
+        </div>
+        <div class="infosPerso">
+                Nom : <?=$persoData->nom?><br>
+                Attaque : <?=$persoData->atq?><br>
+                Vie : <?=$persoData->vie?>
         </div>
     </div>
     <?php include('../Ressources/Commun/footer.html')?>

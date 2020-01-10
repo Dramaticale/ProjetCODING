@@ -2,9 +2,9 @@
     session_start();
 
     require_once 'Model/allModel.php';
-    
+
     $_SESSION['niveau']++;
-    $consData = GameModel::getConsequence();
+    $consData = GameModel::getConsequence(intval($_POST['choix']));
     var_dump($consData);
 
     //si c'est un combat

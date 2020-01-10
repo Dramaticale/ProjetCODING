@@ -52,14 +52,9 @@
             </div>
             <div class="boutonChoix">
             <form method="POST" action="consequence.php">
-                <?php if($_SESSION['niveau'] == 0): ?>
-                    <button name="epee" id="armeDepart" type="submit" value="1">épée</button>
-                    <button name="bouclier" id="armeDepart" type="submit" value="2">bouclier</button>
-                <?php endif; ?>
-                <?php if($_SESSION['niveau'] == 1): ?>
-                    <button name="choix1" id="armeDepart" type="submit"><?=$gameData['choix']['0']->nom?></button>
-                    <button name="choix2" id="armeDepart" type="submit"><?=$gameData['choix']['1']->nom?></button>
-                <?php endif; ?>
+                <?php foreach($gameData['choix'] as $choix): ?>
+                    <button type="submit" name="choix" value="$choix->id"><?=$choix->nom?></button>
+                <?php endforeach; ?>
             </form>
             </div>
         </div>

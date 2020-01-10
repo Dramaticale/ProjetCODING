@@ -1,13 +1,13 @@
 <?php
     session_start();
-
+    require __DIR__.'../../vendor/autoload.php';
     require_once 'Model/allModel.php';
     // var_dump($_POST);
     // var_dump(intval($_POST['choix']));
     // die;
     $_SESSION['niveau']++;
     $consData = GameModel::getConsequence(intval($_POST['choix']));
-    var_dump($consData);
+    dump($consData);
 
     //si c'est un combat
 
@@ -36,7 +36,7 @@
     <div class="containerJeu">
         <div class="jeu">
             <div class="texteEvent">
-                <?=$consData[0]->narration?>
+                <?=$consData->narration?>
             </div>
             <div class="boutonChoix">
                 <button><a href="jeu.php">Continuer</a></button>

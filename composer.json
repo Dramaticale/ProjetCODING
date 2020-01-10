@@ -1,0 +1,13 @@
+{
+    "name": "frias/projet-coding",
+    "authors": [
+        {
+            "name": "Dramaticale",
+            "email": "guertener.matthieu@orange.fr"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "symfony/var-dumper": "^5.0"
+    }
+}

@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require DIR.'../../vendor/autoload.php';
+    require __DIR__.'../../vendor/autoload.php';
     require_once 'Model/allModel.php';
     $_SESSION['niveau'] = !isset($_SESSION['niveau']) ? 0 : $_SESSION['niveau'];
     $persoData = PersoModel::getPerso($_SESSION['userID']['id']);

@@ -1,12 +1,10 @@
 <?php
     session_start();
     require_once 'choixEvent.php';
-    require_once 'GameModel.php';
-    require_once 'PersoModel.php';
+    require_once 'Model/allModel.php';
     $_SESSION['niveau'] = !isset($_SESSION['niveau']) ? 0 : $_SESSION['niveau'];
     $persoData = PersoModel::getPerso($_SESSION['userID']['id']);
 
-    var_dump($persoData);
     if($_SESSION['niveau'] < 3){
         // créer un entier aléatoire
         $random = mt_rand(1,3);
@@ -25,8 +23,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../Ressources/bootstrap-4.3.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styleAccueil.css">
@@ -56,12 +53,12 @@
             <div class="boutonChoix">
             <form method="POST" action="consequence.php">
                 <?php if($_SESSION['niveau'] == 0): ?>
-                    <button name="epee" id="armeDepart" type="submit"><?=$dataEpee['nom']?></button>
-                    <button name="bouclier" id="armeDepart" type="submit"><?=$dataBouclier['nom']?></button>
+                    <button name="epee" id="armeDepart" type="submit" value="1">épée</button>
+                    <button name="bouclier" id="armeDepart" type="submit" value="2">bouclier</button>
                 <?php endif; ?>
                 <?php if($_SESSION['niveau'] == 1): ?>
-                    <button name="epee" id="armeDepart" type="submit"><?=$gameData['choix']['0']->nom?></button>
-                    <button name="bouclier" id="armeDepart" type="submit"><?=$gameData['choix']['1']->nom?></button>
+                    <button name="choix1" id="armeDepart" type="submit"><?=$gameData['choix']['0']->nom?></button>
+                    <button name="choix2" id="armeDepart" type="submit"><?=$gameData['choix']['1']->nom?></button>
                 <?php endif; ?>
             </form>
             </div>

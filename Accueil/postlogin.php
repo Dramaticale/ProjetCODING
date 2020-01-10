@@ -25,7 +25,6 @@
     $req2->execute([':username'=>$username]);
     $resultID = $req2->fetch(PDO::FETCH_ASSOC);
 
-
     if(password_verify($_POST['password'], $identifiant_username['password'])){
         $_SESSION['check'] = "log";
         $_SESSION['username'] = $username;

@@ -5,26 +5,20 @@ session_start();
 $bdd = new PDO('mysql:host=localhost; dbname=projetcoding; charset=utf8;', 'root', NULL);
 $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-$categories = $bdd->query('SELECT nom FROM catégories');
+$categorie = $bdd->query('SELECT nom FROM categorie');
 
-$donneesCategories = $categories->fetchall(PDO::FETCH_ASSOC);
+$donneesCategorie = $categorie->fetchall(PDO::FETCH_ASSOC);
 
-$nomsCategories = [];
 
-foreach ($donneesCategories as $donneeCategories) {
-    array_push($nomsCategories, $donneeCategories['nom']);
-}
+$nomsCategorie = [];
+foreach ($donneesCategorie as $donneeCategorie) {
 
-foreach ($nomsCategories as $nomCategories) {
-    $nomsSections[$nomCategories] = [];
+    $sous_categorie = $bdd->query('SELECT sous_categorie.nom, sous_categorie.id FROM categorie JOIN sous_categorie ON categorie.id = sous_categorie.categorie_id');
 
-    $sections = $bdd->query("SELECT nom FROM sections WHERE catégorie = '".$nomCategories."'");
+    $donneesSous_categorie = $sous_categorie->fetchall(PDO::FETCH_ASSOC);
 
-    $donneesSections = $sections->fetchall(PDO::FETCH_ASSOC);
+    die(var_dump($donneesSous_categorie));
 
-    foreach ($donneesSections as $donneeSections) {
-        array_push($nomsSections[$nomCategories], $donneeSections['nom']);
-    }
 }
 
 ?>

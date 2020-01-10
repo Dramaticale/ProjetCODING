@@ -20,17 +20,17 @@
 ?>
     <main>
 
-            <?php foreach ($nomsCategories as $nomCategorie) { ?>
+            <?php foreach ($donneesCategorie as $donneeCategorie) { ?>
 
                 <div class="container">
 
-                    <div class="box-categorie"><?=$nomCategorie?></div>
+                    <div class="box-categorie"><?=$donneeCategorie['nom']?></div>
 
-                    <?php foreach ($nomsSections[$nomCategorie] as $nomSection) { ?>
+                    <!-- <?php foreach ($nomsSous_categorie[$nomCategorie] as $nomSous_categorie) { ?>
 
-                       <div class="box-link"><a href="./section.php?section=<?=$nomSection?>"><div class="link"><?=$nomSection?></div></a></div>
+                       <div class="box-link"><a href="./sous_categorie.php?sous_categorie=<?=$nomSous_categorie?>"><div class="link"><?=$nomSous_categorie?></div></a></div>
 
-                    <?php } ?>
+                    <?php } ?> -->
 
                 </div>
                 

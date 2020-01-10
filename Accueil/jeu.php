@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require_once 'choixEvent.php';
+    require DIR.'../../vendor/autoload.php';
     require_once 'Model/allModel.php';
     $_SESSION['niveau'] = !isset($_SESSION['niveau']) ? 0 : $_SESSION['niveau'];
     $persoData = PersoModel::getPerso($_SESSION['userID']['id']);
@@ -53,7 +53,7 @@
             <div class="boutonChoix">
             <form method="POST" action="consequence.php">
                 <?php foreach($gameData['choix'] as $choix): ?>
-                    <button type="submit" name="choix" value="$choix->id"><?=$choix->nom?></button>
+                    <button type="submit" name="choix" value="<?=$choix->id?>"><?=$choix->nom?></button>
                 <?php endforeach; ?>
             </form>
             </div>

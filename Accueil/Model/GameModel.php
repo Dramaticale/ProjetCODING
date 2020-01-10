@@ -35,10 +35,10 @@ class GameModel{
 
     public static function getConsequence(Int $cons){
         $db = Database::getDB();
-        $stat = "SELECT * FROM consequence INNER JOIN choix ON choix.consequence_id = consequence.id WHERE choix.id = $cons";
+        $stat = "SELECT consequence.id AS consequence_id, consequence.narration FROM consequence INNER JOIN choix ON choix.consequence_id = consequence.id WHERE choix.id = $cons";
         $req = $db->query($stat);
         $req->execute();
 
-        return $req->fetchAll(PDO::FETCH_OBJ);
+        return $req->fetch(PDO::FETCH_OBJ);
     }
 }

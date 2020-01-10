@@ -2,7 +2,9 @@
     session_start();
 
     require_once 'Model/allModel.php';
-
+    // var_dump($_POST);
+    // var_dump(intval($_POST['choix']));
+    // die;
     $_SESSION['niveau']++;
     $consData = GameModel::getConsequence(intval($_POST['choix']));
     var_dump($consData);

@@ -1,7 +1,5 @@
 <?php
-    include('appelSection.php');
-
-    $_SESSION['section'] = $_GET["section"]
+    include('appelSous_categorie.php');
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +11,7 @@
     <link rel="stylesheet" href="../Ressources/bootstrap-4.3.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../Ressources/commun/styleCommun.css">
     <link rel="stylesheet" href="../Forum/css/styleForum.css">
-    <title><?=$_GET['section']?></title>
+    <title>test</title>
 </head>
 <body>
 <?php
@@ -24,23 +22,32 @@
 <main>
 
     <div class="container">
-        <div class="box-title-section">Sujets de <?=$_GET['section']?></div>
+        <div class="box-title-section">Sujets de </div>
 
         <div>
-            <?php foreach ($nomsSujets as $nomSujets) {?>
+            <?php foreach ($donneesSujets as $donneeSujets) {
+
+                $resultat_dateheure = explode(' ', $donneeSujets['date_creation']);
+                $resultat_date = explode('-', $resultat_dateheure[0]);
+                $resultat_heure = explode(':', $resultat_dateheure[1]); ?>
+
 
                 <div class="box-link">
-                    <a href="./sujet.php?section=<?=$_GET['section']?>&sujet=<?=$nomSujets['slug']?>">
+
+                    <a href="./sujet.php?id=<?=$donneeSujets['id']?>">
+
                         <div class="box-link-text">
-                            <div class="text-title-topic"><?=$nomSujets['titre']?></div>
-                            <div>Dernier message le <?=$date[$i]?></div>
+
+                            <div class="text-title-topic"><?=$donneeSujets['titre']?></div>
+                            <div>Créé le <?=$resultat_date[2]?>/<?=$resultat_date[1]?>/<?=$resultat_date[0]?> à <?=$resultat_heure[0]?>:<?=$resultat_date[1]?></div>
+
                         </div>
+
                     </a>
+
                 </div>
 
-            <?php 
-                $i++;
-            } ?>
+            <?php } ?>
         </div>
         
         <div class="zone-topic-creation">

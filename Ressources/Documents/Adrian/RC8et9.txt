@@ -1,0 +1,25 @@
+Lors de la création de la page sous_categorie.php du forum, j'ai voulu afficher la date de création du sujet à côté de celui-ci.
+J'ai donc récupéré la date de la création du sujet via une requête SQL, l'ai découpé comme je le souhaite grâce à la fonction explode(), puis je l'ai affiché.
+Le problème était que les sujets étaient affichés dans un ordre donné par l'ID, alors que je souhaitais qu'ils soient affichés du plus récent au plus ancien.
+J'ai donc ajouté à ma requête SQL "ORDER BY sujets.date_creation", ce qui affichait les sujets du plus récent au plus ancien.
+Pour trouver comment inverser cet ordre d'affichage, j'ai cherché "reverse order by sql" sur Google.
+Parmi les résultats, j'ai cliqué sur le premier qui semblait expliquer en détail le fonctionnement de ORDER BY.
+Je suis tombé sur le site https://www.geeksforgeeks.org/sql-order-by/ où j'ai appris que, pour afficher les données retournées par une requête SQL dans un ordre descendant, il suffisait d'ajouter DESC à la fin de celle-ci.
+
+
+
+L'instruction ORDER BY en sql est utilisée de sorte à retourner des données dans un sens ascendant ou descendant selon une ou plusieurs colonnes.
+
+* Par défaut ORDER BY trie les données dans un sens ascendant.
+* Nous pouvons utiliser le mot-clé DESC pour trier les données dans un sens descendant et le mot-clé ASC pour les trier dans un sens ascendant.
+
+La syntaxe de toutes les façons d'utiliser ORDER BY est montrée ci-dessous :
+* Trier selon une colonne : Pour trier les données dans un sens ascendant ou descendant, nous pouvons utiliser les mots-clé ASC ou DESC respectivement.
+  Syntaxe :
+SELECT * FROM nom_table ORDER BY nom_colonne ASC|DESC
+
+nom_table : nom de la table
+nom_colonne : nom de la colonne selon laquelle les données ont besoin d'être arrangées
+ASC : Pour trier les données dans un sens ascendant
+DESC : Pour trier les données dans un sens descendant
+| : Utilisez soit ASC, soit DESC pour trier dans un sens ascendant ou descendant

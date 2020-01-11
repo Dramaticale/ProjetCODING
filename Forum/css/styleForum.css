@@ -193,4 +193,5 @@
     width: 35em;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
 }

@@ -1,8 +1,5 @@
 <?php
     include('appelSujet.php');
-
-    $_SESSION['section'] = $_GET["section"];
-    $_SESSION['slug'] = $_GET["sujet"];
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +11,7 @@
     <link rel="stylesheet" href="../Ressources/bootstrap-4.3.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../Ressources/commun/styleCommun.css">
     <link rel="stylesheet" href="../Forum/css/styleForum.css">
-    <title><?=$sujet[0]['titre']?></title>
+    <title><?=$donneesSujets[0]['titre']?></title>
 </head>
 <body>
 <?php
@@ -26,24 +23,41 @@
 
     <div class="container">
     
-        <div class="box-title-topic"><?=$sujet[0]['titre']?></div>
+        <div class="box-title-topic"><?=$donneesSujets[0]['titre']?></div>
 
-        <?php foreach ($tableauMessages as $tableauMessage) { ?>
+        <div class="box-message">
+        
+        <div class="message-zone-infos" >
+            <div class="message-auteur"><?=$nomAuteur[0]['username']?></div>
+            <div class="message-date"><?=$resultat_heure[0]?>:<?=$resultat_date[1]?> <?=$resultat_date[2]?>/<?=$resultat_date[1]?>/<?=$resultat_date[0]?></div>
+        </div>
+
+        <div class="message-zone-texte"><?=$donneesSujets[0]['message']?></div>
+    
+        </div>
+
+        <?php foreach ($donneesCommentaires as $donneeCommentaires) { 
+            
+        $auteur = $bdd->query("SELECT user.username FROM user WHERE user.id = {$donneeCommentaires['user_id']}");
+
+        $nomAuteur = $auteur->fetchall(PDO::FETCH_ASSOC); 
+        
+        $resultat_dateheure = explode(' ', $donneeCommentaires['date']);
+        $resultat_date = explode('-', $resultat_dateheure[0]);
+        $resultat_heure = explode(':', $resultat_dateheure[1]); ?>
 
         <div class="box-message">
         
             <div class="message-zone-infos">
-                <div class="message-auteur"><?=$tableauMessage['auteur']?></div>
-                <div class="message-date"><?=$date[$i]?></div>
+                <div class="message-auteur"><?=$nomAuteur[0]['username']?></div>
+                <div class="message-date"><?=$resultat_heure[0]?>:<?=$resultat_date[1]?> <?=$resultat_date[2]?>/<?=$resultat_date[1]?>/<?=$resultat_date[0]?></div>
             </div>
 
-            <div class="message-zone-texte"><?=$tableauMessage['texte']?></div>
+            <div class="message-zone-texte"><?=$donneeCommentaires['texte']?></div>
         
         </div>
 
-        <?php 
-            $i++;
-        } ?>
+        <?php } ?>
 
         <form action="postSujet.php" method="POST">
             

@@ -9,7 +9,9 @@ $sujets = $bdd->query("SELECT sujets.id, sujets.titre, sujets.date_creation, suj
 
 $donneesSujets = $sujets->fetchall(PDO::FETCH_ASSOC);
 
+$sous_categorie = $bdd->query("SELECT sous_categorie.nom FROM sous_categorie WHERE sous_categorie.id = {$_GET['id']}");
 
+$donneesSous_categorie = $sous_categorie->fetchall(PDO::FETCH_ASSOC);
 
 if (!isset($_SESSION['error-creation-topic'])) {
     $_SESSION['error-creation-topic'] = '';

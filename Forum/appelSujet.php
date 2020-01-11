@@ -5,34 +5,21 @@ session_start();
 $bdd = new PDO('mysql:host=localhost; dbname=projetcoding; charset=utf8;', 'root', NULL);
 $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-$messages = $bdd->query("SELECT texte, auteur, dateMessage FROM messages WHERE sujet='{$_GET["sujet"]}' AND section='{$_GET["section"]}' ORDER BY dateMessage");
+$sujets = $bdd->query("SELECT sujets.id, sujets.titre, sujets.date_creation, sujets.message, sujets.user_id, sujets.sous_categorie_id FROM sujets JOIN user ON sujets.user_id = user.id JOIN sous_categorie on sujets.sous_categorie_id = sous_categorie.id WHERE sujets.id = {$_GET['id']}");
 
-$donneesMessages = $messages->fetchall(PDO::FETCH_ASSOC);
+$donneesSujets = $sujets->fetchall(PDO::FETCH_ASSOC);
 
-$tableauMessages = [];
+$commentaires = $bdd->query("SELECT commentaire.texte, commentaire.date, commentaire.user_id FROM commentaire JOIN user ON commentaire.user_id = user.id JOIN sujets ON commentaire.sujets_id = sujets.id WHERE commentaire.sujets_id = {$_GET['id']} ORDER BY commentaire.date");
 
-foreach ($donneesMessages as $donneesMessage) {
-    array_push($tableauMessages, $donneesMessage);
-}
+$donneesCommentaires = $commentaires->fetchall(PDO::FETCH_ASSOC);
 
-$titreSujet = $bdd->query("SELECT titre FROM sujets WHERE slug='{$_GET["sujet"]}'");
+$auteur = $bdd->query("SELECT user.username FROM user WHERE user.id = {$donneesSujets[0]['user_id']}");
 
-$sujet = $titreSujet->fetchall(PDO::FETCH_ASSOC);
+$nomAuteur = $auteur->fetchall(PDO::FETCH_ASSOC);
 
-$date = [];
-$i = 0;
-
-foreach ($tableauMessages as $tableauMessage) {
-
-    $resultat_dateheure = explode(' ', $tableauMessage['dateMessage']);
-    $resultat_date = explode('-', $resultat_dateheure[0]);
-    $resultat_heure = explode(':', $resultat_dateheure[1]);
-
-    $dateTexte = "Le " . $resultat_date[2] . "/" . $resultat_date[1] . "/" . $resultat_date[0] . " à " . $resultat_heure[0] . ":" . $resultat_heure[1];
-
-    array_push($date ,$dateTexte);
-
-}
+$resultat_dateheure = explode(' ', $donneesSujets[0]['date_creation']);
+$resultat_date = explode('-', $resultat_dateheure[0]);
+$resultat_heure = explode(':', $resultat_dateheure[1]);
 
 if (!isset($_SESSION['errorAnswer'])) {
     $_SESSION['errorAnswer'] = '';

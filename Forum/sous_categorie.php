@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../Ressources/bootstrap-4.3.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../Ressources/commun/styleCommun.css">
     <link rel="stylesheet" href="../Forum/css/styleForum.css">
-    <title>test</title>
+    <title><?=$donneesSous_categorie[0]['nom']?></title>
 </head>
 <body>
 <?php
@@ -22,7 +22,16 @@
 <main>
 
     <div class="container">
-        <div class="box-title-section">Sujets de </div>
+
+        <?php if (!empty($donneesSujets)) {?>
+
+            <div class="box-title-section">Sujets de : <?=strtolower($donneesSous_categorie[0]['nom'])?></div>
+
+        <?php } else { ?>
+
+            <div class="no-topic">Il n'y a actuellement aucun sujet dans la sous-catégorie <?=strtolower($donneesSous_categorie[0]['nom'])?>, pourquoi ne pas être le premier à en créer un ?</div>
+
+        <?php } ?>
 
         <div>
             <?php foreach ($donneesSujets as $donneeSujets) {

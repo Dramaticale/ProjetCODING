@@ -53,7 +53,7 @@
     $password_hashed=password_hash($password, PASSWORD_BCRYPT, ["cost" => 10]);
 
 //On envoie notre requète, on envoie une variable de session de confirmation et on renvoie l'utilisateur sur la page login
-    $statement= 'INSERT INTO user(user.username, user.password, user.role) VALUES ("'.$username.'","'.$password_hashed.'", "membre")';
+    $statement= 'INSERT INTO user(user.username, user.password, user.role user.statut) VALUES ("'.$username.'","'.$password_hashed.'", "membre", "libre")';
     $requete = $connexion->query($statement);
 
     $_SESSION['confirm'] = "Votre compte a été créé avec succès !";

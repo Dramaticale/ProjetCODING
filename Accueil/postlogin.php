@@ -15,20 +15,33 @@
     $connexion = new PDO('mysql:host=localhost;dbname=projetcoding;charset=utf8;','root',NULL);
     $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $test_username= 'SELECT password FROM user WHERE username=:username';
+    $test_username= 'SELECT user.password FROM user WHERE username=:username';
     $requete = $connexion->prepare($test_username);
     $requete->execute([':username'=>$username]);
     $identifiant_username = $requete->fetch(PDO::FETCH_ASSOC);
 
-    $idUsername='SELECT id FROM user WHERE username=:username';
+    $idUsername='SELECT user.id FROM user WHERE username=:username';
     $req2 = $connexion->prepare($idUsername);
     $req2->execute([':username'=>$username]);
     $resultID = $req2->fetch(PDO::FETCH_ASSOC);
+
+    $userRoleStmt='SELECT user.role FROM user WHERE username=:username';
+    $req3 = $connexion->prepare($userRoleStmt);
+    $req3->execute([':username'=>$username]);
+    $userRole = $req3->fetch(PDO::FETCH_ASSOC);
+
+    $userStatutStmt='SELECT user.statut FROM user WHERE username=:username';
+    $req4 = $connexion->prepare($userStatutStmt);
+    $req4->execute([':username'=>$username]);
+    $userStatut = $req4->fetch(PDO::FETCH_ASSOC);
 
     if(password_verify($_POST['password'], $identifiant_username['password'])){
         $_SESSION['check'] = "log";
         $_SESSION['username'] = $username;
         $_SESSION['userID'] = $resultID;
+        $_SESSION['userRole'] = $userRole['role'];
+        $_SESSION['userStatut'] = $userStatut['statut'];
+
         header('Location: index.php');
         exit;
     }else{

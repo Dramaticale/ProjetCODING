@@ -31,7 +31,7 @@
 
         <?php } else { ?>
 
-            <div class="no-topic">Il n'y a actuellement aucun sujet dans la sous-catégorie <?=strtolower($donneesSous_categorie[0]['nom'])?>, pourquoi ne pas être le premier à en créer un ?</div>
+            <div class="no-topic">Il n'y a actuellement aucun sujet dans la sous-catégorie <strong><?=strtolower($donneesSous_categorie[0]['nom'])?></strong>, pourquoi ne pas être le premier à en créer un ?</div>
 
         <?php } ?>
 

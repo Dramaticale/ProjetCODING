@@ -20,29 +20,35 @@
 ?>
     <main>
 
-            <?php foreach ($donneesCategorie as $donneeCategorie) { ?>
+    <div class="container">
 
-                <div class="container">
+                <?php foreach ($donneesCategorie as $donneeCategorie) { ?>
 
-                    <div class="box-categorie"><?=$donneeCategorie['nom']?></div>
+                        <div class="box-categorie"><?=$donneeCategorie['nom']?></div>
 
-                    <div>    
+                        <div>    
 
-                        <?php foreach ($donneesSous_categorie as $donneeSous_categorie) { ?>
+                            <?php foreach ($donneesSous_categorie as $donneeSous_categorie) { ?>
 
-                            <?php if ($donneeSous_categorie['categorie_id'] === $donneeCategorie['id']) { ?>
+                                <?php if ($donneeSous_categorie['categorie_id'] === $donneeCategorie['id']) { ?>
 
-                                <div class="box-link"><a href="./sous_categorie.php?id=<?=$donneeSous_categorie['id']?>"><div class="link"><?=$donneeSous_categorie['nom']?></div></a></div>
+                                    <div class="box-link"><a href="./sous_categorie.php?id=<?=$donneeSous_categorie['id']?>"><div class="link"><?=$donneeSous_categorie['nom']?></div></a></div>
+
+                                <?php } ?>
 
                             <?php } ?>
 
-                        <?php } ?>
+                        </div>
+                    
+                <?php } ?>
 
-                    </div>
+                <?php if ($_SESSION['userRole'] === "admin" || $_SESSION['userRole'] === "modo") { ?>
 
-                </div>
-                
-            <?php } ?>
+                    <a href="statuts.php">Gérer les statuts</a>
+
+                <?php } ?>
+
+            </div>
 
     </main>
 

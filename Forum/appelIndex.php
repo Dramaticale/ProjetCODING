@@ -2,6 +2,11 @@
 
 session_start();
 
+if (!isset($_SESSION['check']) || $_SESSION['check'] !== "log" || !isset($_SESSION['userID']) || empty($_SESSION['userID'])) {
+    $_SESSION['error'] = "Vous ne pouvez pas accéder au forum sans être connecté";
+    header("Location: ../Accueil/index.php");
+}
+
 $bdd = new PDO('mysql:host=localhost; dbname=projetcoding; charset=utf8;', 'root', NULL);
 $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 

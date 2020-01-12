@@ -26,15 +26,19 @@
 
                     <div class="box-categorie"><?=$donneeCategorie['nom']?></div>
 
-                    <?php foreach ($donneesSous_categorie as $donneeSous_categorie) { ?>
+                    <div>    
 
-                        <?php if ($donneeSous_categorie['categorie_id'] === $donneeCategorie['id']) { ?>
+                        <?php foreach ($donneesSous_categorie as $donneeSous_categorie) { ?>
 
-                            <div class="box-link"><a href="./sous_categorie.php?id=<?=$donneeSous_categorie['id']?>"><div class="link"><?=$donneeSous_categorie['nom']?></div></a></div>
+                            <?php if ($donneeSous_categorie['categorie_id'] === $donneeCategorie['id']) { ?>
+
+                                <div class="box-link"><a href="./sous_categorie.php?id=<?=$donneeSous_categorie['id']?>"><div class="link"><?=$donneeSous_categorie['nom']?></div></a></div>
+
+                            <?php } ?>
 
                         <?php } ?>
 
-                    <?php } ?>
+                    </div>
 
                 </div>
                 

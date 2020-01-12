@@ -1,5 +1,7 @@
 <?php
     include('appelSous_categorie.php');
+
+    $_SESSION['sous_categorieID'] = $_GET['id'];
 ?>
 
 <!DOCTYPE html>
@@ -61,7 +63,7 @@
         
         <div class="zone-topic-creation">
 
-            <form action="postSection.php" method="POST">
+            <form action="postSous_categorie.php" method="POST">
 
                 <label for="topic-title" class="label-creation-topic">Titre</label>
                 <input type="text" name='topic-title' class="creation-title-topic" maxlength="128" required>

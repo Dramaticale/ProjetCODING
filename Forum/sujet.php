@@ -1,5 +1,7 @@
 <?php
     include('appelSujet.php');
+
+    $_SESSION['IDsujet'] = $_GET['id'];
 ?>
 
 <!DOCTYPE html>
@@ -50,7 +52,7 @@
         
             <div class="message-zone-infos">
                 <div class="message-auteur"><?=$nomAuteur[0]['username']?></div>
-                <div class="message-date"><?=$resultat_heure[0]?>:<?=$resultat_date[1]?> <?=$resultat_date[2]?>/<?=$resultat_date[1]?>/<?=$resultat_date[0]?></div>
+                <div class="message-date"><?=$resultat_heure[0]?>:<?=$resultat_heure[1]?> <?=$resultat_date[2]?>/<?=$resultat_date[1]?>/<?=$resultat_date[0]?></div>
             </div>
 
             <div class="message-zone-texte"><?=$donneeCommentaires['texte']?></div>

@@ -38,14 +38,13 @@
 }
 
 .box-link:first-child {
-    border-radius: 0em 3em 0em 0em;
+    border-top-right-radius: 3em;;
 }
 
 .box-link:last-child {
-    border-radius: 0em 0em 3em 3em;
     border-bottom: 2px solid rgb(75, 75, 77);
-}
-.box-link:last-of-type {
+    border-bottom-left-radius: 3em;
+    border-bottom-right-radius: 3em;
     margin-bottom: 2em;
 }
 

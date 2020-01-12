@@ -59,7 +59,7 @@
                             <input class="form-control mr-sm-2" type="password" id ="password" name="password" placeholder="Mot de passe">
                         </div>
                         <?php if(isset($_SESSION['error'])):?>
-                            <div class="error"><?= $_SESSION['error']?></div>
+                            <div class="error"><font color="red"><?= $_SESSION['error']?></font></div>
                         <?php endif; ?>
                         <div class="bouton">
                             <button class="btn btn-outline-dark" type="submit">Se connecter</button>

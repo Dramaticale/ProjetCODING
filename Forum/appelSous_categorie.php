@@ -2,8 +2,12 @@
 
 session_start();
 
-if (!isset($_SESSION['check']) || $_SESSION['check'] !== "log" || !isset($_SESSION['userID']) || empty($_SESSION['userID'])) {
+if (!isset($_SESSION['check']) || $_SESSION['check'] !== "log") {
     $_SESSION['error'] = "Vous ne pouvez pas accéder au forum sans être connecté";
+    header("Location: ../Accueil/index.php");
+}
+
+if (!isset($_SESSION['userStatut']) || $_SESSION['userStatut'] === "banni") {
     header("Location: ../Accueil/index.php");
 }
 

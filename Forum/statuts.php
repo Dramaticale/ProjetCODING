@@ -1,5 +1,12 @@
 <?php
     session_start();
+
+    if ($_SESSION['userRole'] !== "admin") {
+        if ($_SESSION['userRole'] !== "modo" || $_SESSION['userStatut'] === "banni") {
+            header("Location: ../Forum/index.php");
+            exit;
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -90,6 +97,8 @@
                 
                 </form>
 
+                <?php $_SESSION['donneesUserKeep'] = $_SESSION['donneesUser']; ?>
+
             <?php } ?>
 
         <?php } ?>
@@ -101,7 +110,9 @@
 <?php
     include('../Ressources/Commun/footer.html');
 
-    $_SESSION['donneesUser'] = [];
+    if (isset($_SESSION['donneesUser'])) {
+        unset($_SESSION['donneesUser']);
+    }
 ?>
 </body>
 </html>

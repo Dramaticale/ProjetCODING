@@ -11,8 +11,8 @@
     require('connexion.php');
 
 //On affecte des variables pour une meilleure lisibilité
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $username = htmlspecialchars($_POST['username']);
+    $password = htmlspecialchars($_POST['password']);
 
 //Test si les passwords correspondent
     if($password != $_POST['confirm_password']){

@@ -2,9 +2,12 @@
     session_start();
     require __DIR__.'../../vendor/autoload.php';
     require_once 'Model/allModel.php';
+    if($_SESSION['check']!=='log'){
+        header('Location: oust.php');
+        exit();
+    }
     $_SESSION['niveau'] = !isset($_SESSION['niveau']) ? 0 : $_SESSION['niveau'];
     $persoData = PersoModel::getPerso($_SESSION['userID']['id']);
-
     if($_SESSION['niveau'] < 3){
         // créer un entier aléatoire
         $random = mt_rand(1,3);
@@ -13,11 +16,10 @@
 
     } elseif($_SESSION['niveau'] = 3) {
         // fin de partie
-        echo('Vous avez triomphé ... Pour l\'instant');
+        $fin = 'Vous avez triomphé... Pour l\'instant';
     }else{
-        echo('Vous êtes mort...');
+        $fin = 'Vous êtes mort...';
     }
-
 ?>
 <!doctype html>
 <html lang="fr">
@@ -39,6 +41,7 @@
     <div class="containerJeu">
         <div class="jeu">
             <div class="texteEvent">
+            <?=$fin?>
             <?php if($_SESSION['niveau'] == 0): ?>
                 C'est votre premier jour de formation, vous êtes déjà installé quand votre professeur en chef Emelynx entre dans la pièce. Plus un bruit. La présentation se fait dans le calme. Vous avez hâte de commencer car c'est votre avenir qui est en jeu.<br>
                 Votre premier cours arrive, il est avec le professeur Florajax, un mage dôté d'un savoir immense, c'est lui qui vous enseignera comment être l'un des meilleurs.<br>
@@ -52,9 +55,14 @@
             </div>
             <div class="boutonChoix">
             <form method="POST" action="consequence.php">
+                <?php if($gameData['evennement']==false): ?>
+                    <button type="submit" name="choix" value="epee">épée</button>
+                    <button type="submit" name="choix" value="bouclier">bouclier</button>
+                <?php else: ?>
                 <?php foreach($gameData['choix'] as $choix): ?>
                     <button type="submit" name="choix" value="<?=$choix->id?>"><?=$choix->nom?></button>
                 <?php endforeach; ?>
+                <?php endif; ?>
             </form>
             </div>
         </div>

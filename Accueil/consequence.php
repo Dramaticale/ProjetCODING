@@ -2,12 +2,8 @@
     session_start();
     require __DIR__.'../../vendor/autoload.php';
     require_once 'Model/allModel.php';
-    // var_dump($_POST);
-    // var_dump(intval($_POST['choix']));
-    // die;
     $_SESSION['niveau']++;
     $consData = GameModel::getConsequence(intval($_POST['choix']));
-    dump($consData);
 
     //si c'est un combat
 

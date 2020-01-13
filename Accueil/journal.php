@@ -1,5 +1,9 @@
 <?php
     session_start();
+    if($_SESSION['check']!=='log'){
+        header('Location: oust.php');
+        exit();
+    }
 ?>
 <!doctype html>
 <html lang="fr">

@@ -1,3 +1,7 @@
+<?php 
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,9 +11,17 @@
     <title>Document</title>
 </head>
 <body>
+    Veuillez créer votre personnage (maximum 15pts de caractéristiques au total)
     <form method="POST" action="postCreationPerso.php">
+    <?php if(isset($_SESSION['erreurPerso'])): ?>
+        <?=$_SESSION['erreurPerso']?>
+    <?php endif; ?>
+    <br>
         <input name="nom" value="nom">
+        <input name="vie" value="vie">
+        <input name="atq" value="atq">
         <button type="submit">Jouer</button>
     </form>
 </body>
 </html>
+<?php $_SESSION['erreurPerso'] ='' ?>

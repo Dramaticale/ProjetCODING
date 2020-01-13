@@ -49,14 +49,6 @@
             </div>
         </div>
     <?php endif; ?>
-    <div class="card">
-        <div class="connexion">
-            <?php if(isset($_SESSION['check']) == 'log'): ?>
-                Bonjour <?= $_SESSION['username'] ?> !
-                <a href="logout.php">Se déconnecter</a>
-            <?php endif; ?>
-        </div>
-    </div>
 </div>
 <?php include('../Ressources/Commun/footer.html')?>
 </body>

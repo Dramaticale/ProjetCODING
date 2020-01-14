@@ -82,6 +82,7 @@
                 <?php else: ?>
                     <?=$consData->narration?>
                 <?php endif; ?>
+                <?php if($_POST['choix'])
             </div>
             <div class="boutonChoix">
                 <button><a href="jeu.php">Continuer</a></button>

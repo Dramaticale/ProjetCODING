@@ -8,7 +8,11 @@
     }
     $_SESSION['niveau'] = !isset($_SESSION['niveau']) ? 0 : $_SESSION['niveau'];
     $persoData = PersoModel::getPerso($_SESSION['userID']['id']);
-    if($_SESSION['niveau'] < 3){
+    if(!$persoData){
+        header('Location:creationPerso.php');
+        exit;
+    }
+    if($_SESSION['niveau'] < 2){
         // créer un entier aléatoire
         $random = mt_rand(1,3);
         // recuperer evenement et choix
@@ -41,27 +45,31 @@
     <div class="containerJeu">
         <div class="jeu">
             <div class="texteEvent">
-            <?=$fin?>
-            <?php if($_SESSION['niveau'] == 0): ?>
-                C'est votre premier jour de formation, vous êtes déjà installé quand votre professeur en chef Emelynx entre dans la pièce. Plus un bruit. La présentation se fait dans le calme. Vous avez hâte de commencer car c'est votre avenir qui est en jeu.<br>
-                Votre premier cours arrive, il est avec le professeur Florajax, un mage dôté d'un savoir immense, c'est lui qui vous enseignera comment être l'un des meilleurs.<br>
-                Le cours commence, après une première leçon sur le langage commun HTML, il décide de vous mettre à l'épreuve. Vous le voyez agiter ses mains tout en murmurant un dialecte ancien. Après quelques instants un portail apparaît et Florajax vous fait signe d'y entrer.<br>
-                Il fait sombre à l'intérieur. Soudain, vous entendez une petite voix, c'est celle de Florajax.<br>
-                "Tu apprends vite <?=$_SESSION['username']?>, je vais te mettre à l'épreuve. A ta droite il y a 2 objets, une épée et un bouclier, choisi bien, tu ne peux en prendre qu'un pour le début de ton aventure."<br>
-            <?php endif; ?>
-            <?php if($_SESSION['niveau'] == 1): ?>
-                "Je pense que tout se passera bien pour toi. Tu es dans le chateau W3C, qui renferme un savoir colossal dans ses écrits, mais également abrite un bon nombre de monstre. Tu vas devoir aller chercher un livre, on raconte qu'il est gardé par un terrible monstre. Tu vas être livré à toi même, bonne chance." La voix se tue, vous n'entendez plus rien. Vous entamez votre route quand soudain <?= $gameData['evennement']->texte?>
-            <?php endif; ?>
+                <?php if($_SESSION['niveau'] == 0): ?>
+                    C'est votre premier jour de formation, vous êtes déjà installé quand votre professeur en chef Emelynx entre dans la pièce. Plus un bruit. La présentation se fait dans le calme. Vous avez hâte de commencer car c'est votre avenir qui est en jeu.<br>
+                    Votre premier cours arrive, il est avec le professeur Florajax, un mage dôté d'un savoir immense, c'est lui qui vous enseignera comment être l'un des meilleurs.<br>
+                    Le cours commence, après une première leçon sur le langage commun HTML, il décide de vous mettre à l'épreuve. Vous le voyez agiter ses mains tout en murmurant un dialecte ancien. Après quelques instants un portail apparaît et Florajax vous fait signe d'y entrer.<br>
+                    Il fait sombre à l'intérieur. Soudain, vous entendez une petite voix, c'est celle de Florajax.<br>
+                    "Tu apprends vite <?=$_SESSION['username']?>, je vais te mettre à l'épreuve. A ta droite il y a 2 objets, une épée et un bouclier, choisi bien, tu ne peux en prendre qu'un pour le début de ton aventure."<br>
+                <?php endif; ?>
+                <?php if($_SESSION['niveau'] == 1): ?>
+                    "Je pense que tout se passera bien pour toi. Tu es dans le chateau W3C, qui renferme un savoir colossal dans ses écrits, mais également abrite un bon nombre de monstre. Tu vas devoir aller chercher un livre, on raconte qu'il est gardé par un terrible monstre. Tu vas être livré à toi même, bonne chance." La voix se tue, vous n'entendez plus rien. Vous entamez votre route quand soudain <?= $gameData['evennement']->texte?>
+                <?php endif; ?>
+                <?php if($_SESSION['niveau']==3): ?>
+                    <?=$fin?>
+                <?php endif;?>
             </div>
             <div class="boutonChoix">
             <form method="POST" action="consequence.php">
-                <?php if($gameData['evennement']==false): ?>
-                    <button type="submit" name="choix" value="epee">épée</button>
-                    <button type="submit" name="choix" value="bouclier">bouclier</button>
+                <?php if($_SESSION['niveau']==0): ?>
+                    <button type="submit" name="choix" value="1">épée</button>
+                    <button type="submit" name="choix" value="2">bouclier</button>
                 <?php else: ?>
-                <?php foreach($gameData['choix'] as $choix): ?>
-                    <button type="submit" name="choix" value="<?=$choix->id?>"><?=$choix->nom?></button>
-                <?php endforeach; ?>
+                    <?php if($_SESSION['niveau'] < 2): ?>
+                        <?php foreach($gameData['choix'] as $choix): ?>
+                            <button type="submit" name="choix" value="<?=$choix->id?>"><?=$choix->nom?></button>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
                 <?php endif; ?>
             </form>
             </div>

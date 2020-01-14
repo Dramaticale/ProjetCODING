@@ -19,10 +19,14 @@ class Personnage{
             'winner' => null
         ];
         while($ennemi->vie > 0 && $this->vie > 0){
-            $recap['text'] .= $this->nom . 'inflige'.$this->atq.'à'.$ennemi->nom.'<br>';
+            if($this->vie > 0){
+            $recap['text'] .= '<br>'.$this->nom . 'inflige'.$this->atq.'à'.$ennemi->nom;
             $ennemi->vie -= $this->atq;
-            $this->vie -= $ennemi->atq;
-            $recap['text'] .= $ennemi->nom. 'vous a infligé' .$ennemi->atq.'<br>';
+            }
+            if($ennemi->vie > 0){
+                $this->vie -= $ennemi->atq;
+                $recap['text'] .= '<br>'.$ennemi->nom. 'vous a infligé' .$ennemi->atq;
+            }
         }
         if($this->vie < 0){
             $recap['winner'] = false;

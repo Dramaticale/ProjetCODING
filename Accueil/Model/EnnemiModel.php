@@ -7,6 +7,7 @@ class EnnemiModel{
         $db = Database::getDB();
         $stat = "SELECT nom, atq, vie FROM ennemi WHERE niveau =$id";
         $req = $db->query($stat);
-        return $req->fetch(PDO::FETCH_OBJ);
+        $req->execute();
+        return $req->fetchObject('Ennemi');
     }
 }

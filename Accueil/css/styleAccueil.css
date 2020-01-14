@@ -74,3 +74,13 @@ footer{
     margin-right: 18%;
     padding-left: 1em;
 }
+
+.youDied{
+    background-color: black;
+    color: red;
+    display: flex;
+    justify-content: center;
+    height: 750px;
+    align-items: center;
+    font-size : 5em;
+}

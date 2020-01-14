@@ -50,7 +50,7 @@
                         <div class="box-link-text">
 
                             <div class="text-title-topic"><?=$donneeSujets['titre']?></div>
-                            <div>Créé le <?=$resultat_date[2]?>/<?=$resultat_date[1]?>/<?=$resultat_date[0]?> à <?=$resultat_heure[0]?>:<?=$resultat_date[1]?></div>
+                            <div>Créé le <?=$resultat_date[2]?>/<?=$resultat_date[1]?>/<?=$resultat_date[0]?> à <?=$resultat_heure[0]?>:<?=$resultat_heure[1]?></div>
 
                         </div>
 

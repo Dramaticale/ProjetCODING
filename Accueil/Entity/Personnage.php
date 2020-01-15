@@ -12,20 +12,18 @@ class Personnage{
     }
     
     public function combat(Ennemi $ennemi){
-        var_dump($ennemi);
-        var_dump($this);
         $recap = [
             'text' => '',
             'winner' => null
         ];
         while($ennemi->vie > 0 && $this->vie > 0){
             if($this->vie > 0){
-            $recap['text'] .= '<br>'.$this->nom . 'inflige'.$this->atq.'à'.$ennemi->nom;
+            $recap['text'] .= '<br>'.$this->nom . ' inflige '.$this->atq.' points de dégats à '.$ennemi->nom.'.';
             $ennemi->vie -= $this->atq;
             }
             if($ennemi->vie > 0){
                 $this->vie -= $ennemi->atq;
-                $recap['text'] .= '<br>'.$ennemi->nom. 'vous a infligé' .$ennemi->atq;
+                $recap['text'] .= '<br>'.$ennemi->nom. ' vous a infligé ' .$ennemi->atq. ' points de dégats.';
             }
         }
         if($this->vie < 0){

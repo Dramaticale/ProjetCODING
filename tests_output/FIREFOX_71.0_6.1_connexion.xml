@@ -5,9 +5,13 @@
 
   <testsuite name="connexion"
     errors="0" failures="0" hostname="" id="" package="connexion" skipped="0"
-    tests="1" time="10.32" timestamp="">
+    tests="1" time="9.741" timestamp="">
   
-    <testcase name="connexion" classname="connexion" time="10.32" assertions="0">
+    <testcase name="connexion" classname="connexion" time="9.741" assertions="2">
+
+    
+
+    
     </testcase>
   
 

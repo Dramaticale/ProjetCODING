@@ -12,6 +12,7 @@
         header('Location:creationPerso.php');
         exit;
     }
+
     if($_SESSION['niveau'] < 2){
         // créer un entier aléatoire
         $random = mt_rand(1,3);

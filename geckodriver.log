@@ -1,10 +1,108 @@
-1579180487492	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Matthieu\\AppData\\Local\\Temp\\rust_mozprofilePIzAQk"
-1579180488037	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
-1579180488037	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
-1579180488037	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
-1579180488037	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
-JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
-1579180489984	Marionette	INFO	Listening on port 59289
-1579180534558	Marionette	INFO	Stopped listening on port 59289
-[Child 9044, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1575282935/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
-[Child 10672, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1575282935/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1579447633240	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Dezzo\\AppData\\Local\\Temp\\rust_mozprofileUA0ZRe"
+Unable to read VR Path Registry from C:\Users\Dezzo\AppData\Local\openvr\openvrpaths.vrpath
+1579447634240	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Dezzo\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Dezzo\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Dezzo\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Dezzo\AppData\Local\openvr\openvrpaths.vrpath
+1579447636679	Marionette	INFO	Listening on port 60924
+1579447637083	Marionette	DEBUG	Register listener.js for window 4294967297
+1579447637101	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1579447637376	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1579447637376	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1579447637417	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost/ProjetCODING/Accueil/"
+1579447637737	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost/ProjetCODING/Accueil/"
+1579447637897	Marionette	DEBUG	Received DOM event "beforeunload" for "http://localhost/ProjetCODING/Accueil/"
+1579447637931	Marionette	DEBUG	Received DOM event "pagehide" for "http://localhost/ProjetCODING/Accueil/"
+1579447637931	Marionette	DEBUG	Received DOM event "unload" for "http://localhost/ProjetCODING/Accueil/"
+1579447638117	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost/ProjetCODING/Accueil/inscription.php"
+1579447638118	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost/ProjetCODING/Accueil/inscription.php"
+1579447644330	Marionette	DEBUG	Received DOM event "beforeunload" for "http://localhost/ProjetCODING/Accueil/inscription.php"
+1579447644608	Marionette	DEBUG	Received DOM event "pagehide" for "http://localhost/ProjetCODING/Accueil/inscription.php"
+1579447644608	Marionette	DEBUG	Received DOM event "unload" for "http://localhost/ProjetCODING/Accueil/inscription.php"
+1579447644614	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost/ProjetCODING/Accueil/index.php"
+1579447644637	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost/ProjetCODING/Accueil/index.php"
+1579447644653	Marionette	DEBUG	Received DOM event "beforeunload" for "http://localhost/ProjetCODING/Accueil/index.php"
+1579447644669	Marionette	DEBUG	Received DOM event "pagehide" for "http://localhost/ProjetCODING/Accueil/index.php"
+1579447644669	Marionette	DEBUG	Received DOM event "unload" for "http://localhost/ProjetCODING/Accueil/index.php"
+1579447644675	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost/ProjetCODING/Accueil/"
+1579447644706	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost/ProjetCODING/Accueil/"
+1579447644782	Marionette	DEBUG	Received DOM event "beforeunload" for "http://localhost/ProjetCODING/Accueil/"
+1579447644858	Marionette	DEBUG	Received DOM event "pagehide" for "http://localhost/ProjetCODING/Accueil/"
+1579447644858	Marionette	DEBUG	Received DOM event "unload" for "http://localhost/ProjetCODING/Accueil/"
+1579447644862	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost/ProjetCODING/Accueil/index.php"
+1579447644921	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost/ProjetCODING/Accueil/index.php"
+1579447647955	Marionette	DEBUG	Received DOM event "beforeunload" for "http://localhost/ProjetCODING/Accueil/index.php"
+1579447647967	Marionette	DEBUG	Received DOM event "pagehide" for "http://localhost/ProjetCODING/Accueil/index.php"
+1579447647967	Marionette	DEBUG	Received DOM event "unload" for "http://localhost/ProjetCODING/Accueil/index.php"
+1579447647972	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost/ProjetCODING/Accueil/"
+1579447647996	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost/ProjetCODING/Accueil/"
+1579447648025	Marionette	DEBUG	Received DOM event "beforeunload" for "http://localhost/ProjetCODING/Accueil/"
+1579447648105	Marionette	DEBUG	Received DOM event "pagehide" for "http://localhost/ProjetCODING/Accueil/"
+1579447648105	Marionette	DEBUG	Received DOM event "unload" for "http://localhost/ProjetCODING/Accueil/"
+1579447648110	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost/ProjetCODING/Accueil/wiki.php"
+1579447648134	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost/ProjetCODING/Accueil/wiki.php"
+1579447650159	Marionette	DEBUG	Received DOM event "beforeunload" for "http://localhost/ProjetCODING/Accueil/wiki.php"
+1579447650166	Marionette	DEBUG	Received DOM event "pagehide" for "http://localhost/ProjetCODING/Accueil/wiki.php"
+1579447650166	Marionette	DEBUG	Received DOM event "unload" for "http://localhost/ProjetCODING/Accueil/wiki.php"
+1579447650169	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost/ProjetCODING/Accueil/journal.php"
+1579447650196	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost/ProjetCODING/Accueil/journal.php"
+1579447652218	Marionette	DEBUG	Received DOM event "beforeunload" for "http://localhost/ProjetCODING/Accueil/journal.php"
+1579447652229	Marionette	DEBUG	Received DOM event "pagehide" for "http://localhost/ProjetCODING/Accueil/journal.php"
+1579447652229	Marionette	DEBUG	Received DOM event "unload" for "http://localhost/ProjetCODING/Accueil/journal.php"
+1579447652233	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost/ProjetCODING/Forum/index.php"
+1579447652260	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost/ProjetCODING/Forum/index.php"
+1579447654284	Marionette	DEBUG	Received DOM event "beforeunload" for "http://localhost/ProjetCODING/Forum/index.php"
+1579447654302	Marionette	DEBUG	Received DOM event "pagehide" for "http://localhost/ProjetCODING/Forum/index.php"
+1579447654303	Marionette	DEBUG	Received DOM event "unload" for "http://localhost/ProjetCODING/Forum/index.php"
+1579447654306	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost/ProjetCODING/Accueil/jeu.php"
+1579447654349	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost/ProjetCODING/Accueil/jeu.php"
+1579447654365	Marionette	DEBUG	Received DOM event "beforeunload" for "http://localhost/ProjetCODING/Accueil/jeu.php"
+1579447654372	Marionette	DEBUG	Received DOM event "pagehide" for "http://localhost/ProjetCODING/Accueil/jeu.php"
+1579447654372	Marionette	DEBUG	Received DOM event "unload" for "http://localhost/ProjetCODING/Accueil/jeu.php"
+1579447654538	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost/ProjetCODING/Accueil/creationPerso.php"
+1579447654540	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost/ProjetCODING/Accueil/creationPerso.php"
+1579447656803	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1579447657520	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1579447658234	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1579447658948	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1579447659660	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1579447660378	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1579447661093	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1579447661814	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1579447662529	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1579447663241	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1579447663957	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1579447664671	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1579447665386	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1579447667613	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1579447668348	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1579447669063	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1579447669778	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1579447670496	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1579447671210	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1579447671926	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1579447672658	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1579447673383	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1579447674098	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1579447674816	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1579447675531	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1579447676248	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1579447678268	Marionette	DEBUG	Received DOM event "beforeunload" for "http://localhost/ProjetCODING/Accueil/creationPerso.php"
+1579447678278	Marionette	DEBUG	Received DOM event "pagehide" for "http://localhost/ProjetCODING/Accueil/creationPerso.php"
+1579447678278	Marionette	DEBUG	Received DOM event "unload" for "http://localhost/ProjetCODING/Accueil/creationPerso.php"
+1579447678282	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost/ProjetCODING/Accueil/postCreationPerso.php"
+1579447678285	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost/ProjetCODING/Accueil/postCreationPerso.php"
+1579447678295	Marionette	DEBUG	Received DOM event "beforeunload" for "http://localhost/ProjetCODING/Accueil/postCreationPerso.php"
+1579447678320	Marionette	DEBUG	Received DOM event "pagehide" for "http://localhost/ProjetCODING/Accueil/postCreationPerso.php"
+1579447678320	Marionette	DEBUG	Received DOM event "unload" for "http://localhost/ProjetCODING/Accueil/postCreationPerso.php"
+1579447678325	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost/ProjetCODING/Accueil/jeu.php"
+1579447678328	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost/ProjetCODING/Accueil/jeu.php"
+[Parent 16268, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Parent 16268, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 15760, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 15760, Chrome_ChildThread] WARNING: pipe error[Child 15544, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 15544, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+

@@ -18,7 +18,7 @@ $sujets = $bdd->query("SELECT sujets.id, sujets.titre, sujets.date_creation, suj
 
 $donneesSujets = $sujets->fetchall(PDO::FETCH_ASSOC);
 
-$commentaires = $bdd->query("SELECT commentaire.texte, commentaire.date, commentaire.user_id FROM commentaire JOIN user ON commentaire.user_id = user.id JOIN sujets ON commentaire.sujets_id = sujets.id WHERE commentaire.sujets_id = {$_GET['id']} ORDER BY commentaire.date");
+$commentaires = $bdd->query("SELECT commentaire.id, commentaire.texte, commentaire.date, commentaire.user_id FROM commentaire JOIN user ON commentaire.user_id = user.id JOIN sujets ON commentaire.sujets_id = sujets.id WHERE commentaire.sujets_id = {$_GET['id']} ORDER BY commentaire.date");
 
 $donneesCommentaires = $commentaires->fetchall(PDO::FETCH_ASSOC);
 

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="0"
+            tests="0">
+
+  <testsuite name="creerSujet"
+    errors="1" failures="0" hostname="" id="" package="creerSujet" skipped="2"
+    tests="0" time="0.000" timestamp="">
+  
+
+  
+    <system-err>
+      [0;31m  Error: An error occurred while retrieving a new session: &#34;permission denied&#34;[0m
+[0;90m       at endReadableNT (_stream_readable.js:1185:12)
+       at processTicksAndRejections (internal/process/task_queues.js:81:21)[0m
+    </system-err>
+  
+
+  
+    
+    <testcase
+      name="Accéder au forum" classname="creerSujet">
+      <skipped />
+    </testcase>
+    
+    <testcase
+      name="Créer un sujet" classname="creerSujet">
+      <skipped />
+    </testcase>
+    
+  
+  </testsuite>
+</testsuites>

@@ -50,7 +50,7 @@
 
 .box-title-section {
     background-color: rgb(255, 221, 68);
-    width: fit-content;
+    width: 50%;
     border: 2px solid rgb(75, 75, 77);
     border-bottom: 0px;
     border-radius: 3em 3em 0em 0em;

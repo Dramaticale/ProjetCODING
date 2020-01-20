@@ -2,6 +2,7 @@
     include('appelSujet.php');
 
     $_SESSION['IDsujet'] = $_GET['id'];
+    $_SESSION['IDsous_categorie'] = $donneesSujets[0]['sous_categorie_id'];
 ?>
 
 <!DOCTYPE html>
@@ -32,6 +33,9 @@
         <div class="message-zone-infos" >
             <div class="message-auteur"><?=$nomAuteur[0]['username']?></div>
             <div class="message-date"><?=$resultat_heure[0]?>:<?=$resultat_heure[1]?> <?=$resultat_date[2]?>/<?=$resultat_date[1]?>/<?=$resultat_date[0]?></div>
+            <?php if ($_SESSION['userRole'] === "admin" || $_SESSION['userRole'] === "modo") { ?>
+                <a href="postDeleteTopic.php?id=<?=$donneesSujets[0]['id']?>" class="delete" onclick="return confirm('Voulez-vous vraiment supprimer l\'entièreté de ce sujet ?')">Supprimer le sujet</a>
+            <?php } ?>
         </div>
 
         <div class="message-zone-texte"><?=$donneesSujets[0]['message']?></div>
@@ -53,6 +57,9 @@
             <div class="message-zone-infos">
                 <div class="message-auteur"><?=$nomAuteur[0]['username']?></div>
                 <div class="message-date"><?=$resultat_heure[0]?>:<?=$resultat_heure[1]?> <?=$resultat_date[2]?>/<?=$resultat_date[1]?>/<?=$resultat_date[0]?></div>
+                <?php if ($_SESSION['userRole'] === "admin" || $_SESSION['userRole'] === "modo") { ?>
+                    <a href="postDeleteComment.php?id=<?=$donneeCommentaires['id']?>" class="delete" onclick="return confirm('Voulez-vous vraiment supprimer ce commentaire ?')">Supprimer le commentaire</a>
+                <?php } ?>
             </div>
 
             <div class="message-zone-texte"><?=$donneeCommentaires['texte']?></div>

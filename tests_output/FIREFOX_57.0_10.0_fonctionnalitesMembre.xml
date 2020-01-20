@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="2"
+            failures="1"
+            tests="2">
+
+  <testsuite name="fonctionnalitesMembre"
+    errors="2" failures="1" hostname="" id="" package="fonctionnalitesMembre" skipped="0"
+    tests="2" time="11.79" timestamp="">
+  
+    <testcase name="Accéder au forum" classname="fonctionnalitesMembre" time="1.470" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Créer un sujet" classname="fonctionnalitesMembre" time="10.32" assertions="3">
+
+    
+
+      <failure message="Timed out while waiting for element &lt;body &gt; main &gt; div &gt; div:nth-child(2) &gt; div &gt; a &gt; div &gt; div.text-title-topic&gt; to be present for 5000 milliseconds. - expected [0;32m&#34;visible&#34;[0m but got: [0;31m&#34;not found&#34;[0m [0;90m(5046ms)[0m">    at Object.Créer un sujet (C:\laragon\www\ProjetCODING\teste2e\Forum\fonctionnalitesMembre.js:20:14)
+    at processTicksAndRejections (internal/process/task_queues.js:94:5)</failure>
+
+    <failure message="    at Object.Créer un sujet (C:\laragon\www\ProjetCODING\teste2e\Forum\fonctionnalitesMembre.js:20:14)">    at processTicksAndRejections (internal/process/task_queues.js:94:5)</failure>
+    </testcase>
+  
+
+  
+    <system-err>
+      [0;31m  Error: Unknown property: &#34;expect&#34;. Please consult docs at: http://nightwatchjs.org/api.[0m
+[0;90m       at Object.Créer un sujet (C:\laragon\www\ProjetCODING\teste2e\Forum\fonctionnalitesMembre.js:24:13)
+       at processTicksAndRejections (internal/process/task_queues.js:94:5)[0m
+[0;31m  NoSuchElementError: An error occurred while running .setValue() command on &lt;body &gt; main &gt; div &gt; div.zone-topic-creation &gt; form &gt; textarea&gt;: undefined; undefined
+   {&#34;value&#34;:[]}[0m
+[0;90m       at processTicksAndRejections (internal/process/task_queues.js:94:5)[0m
+    </system-err>
+  
+
+  
+  </testsuite>
+</testsuites>

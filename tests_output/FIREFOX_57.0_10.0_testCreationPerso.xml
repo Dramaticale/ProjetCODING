@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="5">
+
+  <testsuite name="testCreationPerso"
+    errors="0" failures="1" hostname="" id="" package="testCreationPerso" skipped="0"
+    tests="5" time="48.30" timestamp="">
+  
+    <testcase name="enregistrer" classname="testCreationPerso" time="7.544" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="se connecter" classname="testCreationPerso" time="3.310" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="navigation" classname="testCreationPerso" time="6.400" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="creation personnage" classname="testCreationPerso" time="23.93" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="jouer" classname="testCreationPerso" time="7.110" assertions="1">  <failure message="Expected element &lt;body &gt; div &gt; div.infosPerso&gt; text to contain: [0;33m&#34;JeanJacques&#34;[0m - element was not found - expected [0;32m&#34;contain &#39;JeanJacques&#39;&#34;[0m but got: [0;31m&#34;not present&#34;[0m[0;90m (5065ms)[0m">    at Object.jouer (C:\laragon\www\ProjetCODING\teste2e\accueil\testCreationPerso.js:115:21)
+    at processTicksAndRejections (internal/process/task_queues.js:94:5)</failure>
+
+    <failure message="    at Object.jouer (C:\laragon\www\ProjetCODING\teste2e\accueil\testCreationPerso.js:115:21)">    at processTicksAndRejections (internal/process/task_queues.js:94:5)</failure>
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>

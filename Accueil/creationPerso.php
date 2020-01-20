@@ -34,6 +34,9 @@ if(!isset($_SESSION['userID'])){
         <div class="row justify-content-center">
             <div class="col-6">
             Veuillez créer votre personnage (maximum 15pts de caractéristiques au total)
+            <?php if(isset($_SESSION['erreurPerso'])): ?>
+                <?=$_SESSION['erreurPerso']?>
+            <?php endif; ?>
             <form method="POST" action="postCreationPerso.php">
                 <div class="form-group">
                     <label for="nom"></label>

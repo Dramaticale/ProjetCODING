@@ -1,11 +1,32 @@
-1579093964572	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Matthieu\\AppData\\Local\\Temp\\rust_mozprofileIOPwCb"
-1579093965516	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
-1579093965516	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
-1579093965516	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
-1579093965516	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
-JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
-1579093967773	Marionette	INFO	Listening on port 63713
-1579093977715	Marionette	INFO	Stopped listening on port 63713
-[Child 7980, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1575282935/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
-[Child 10808, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1575282935/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
-[Child 10808, Chrome_ChildThread] WARNING: p[Parent 364, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1575282935/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1579455961940	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Dezzo\\AppData\\Local\\Temp\\rust_mozprofileZy4u2j"
+Unable to read VR Path Registry from C:\Users\Dezzo\AppData\Local\openvr\openvrpaths.vrpath
+1579455962498	Marionette	INFO	Enabled via --marionette
+Unable to read VR Path Registry from C:\Users\Dezzo\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Dezzo\AppData\Local\openvr\openvrpaths.vrpath
+Unable to read VR Path Registry from C:\Users\Dezzo\AppData\Local\openvr\openvrpaths.vrpath
+[Parent 1664, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 1268, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/Unable to read VR Path Registry from C:\Users\Dezzo\AppData\Local\openvr\openvrpaths.vrpath
+1579455965253	Marionette	INFO	Listening on port 63887
+1579455965294	Marionette	DEBUG	Register listener.js for window 4294967297
+1579455965495	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1579455965519	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1579455965519	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1579455965527	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost/ProjetCODING/Accueil/"
+1579455965599	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost/ProjetCODING/Accueil/"
+1579455965711	Marionette	DEBUG	Received DOM event "beforeunload" for "http://localhost/ProjetCODING/Accueil/"
+1579455966860	Marionette	DEBUG	Received DOM event "pagehide" for "http://localhost/ProjetCODING/Accueil/"
+1579455966861	Marionette	DEBUG	Received DOM event "unload" for "http://localhost/ProjetCODING/Accueil/"
+1579455966864	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost/ProjetCODING/Accueil/index.php"
+1579455966889	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost/ProjetCODING/Accueil/index.php"
+1579455966929	Marionette	DEBUG	Received DOM event "beforeunload" for "http://localhost/ProjetCODING/Accueil/index.php"
+1579455967002	Marionette	DEBUG	Received DOM event "pagehide" for "http://localhost/ProjetCODING/Accueil/index.php"
+1579455967002	Marionette	DEBUG	Received DOM event "unload" for "http://localhost/ProjetCODING/Accueil/index.php"
+1579455967008	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://localhost/ProjetCODING/Forum/index.php"
+1579455967033	Marionette	DEBUG	Received DOM event "pageshow" for "http://localhost/ProjetCODING/Forum/index.php"
+[Child 16612, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 16612, Chrome_ChildThread] WARNING: pipe error: 10[Parent 1664, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 5100, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 5100, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+[GPU 16692, Chrome_ChildThread] WARNING: pipe error: 109: file z:/buil
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+

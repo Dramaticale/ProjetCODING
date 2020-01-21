@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="3">
+
+  <testsuite name="4suppressions"
+    errors="0" failures="0" hostname="" id="" package="4suppressions" skipped="0"
+    tests="3" time="7.165" timestamp="">
+  
+    <testcase name="Accéder au forum" classname="4suppressions" time="2.504" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Supprimer un commentaire" classname="4suppressions" time="1.297" assertions="5">
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Supprimer un sujet" classname="4suppressions" time="3.364" assertions="5">
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>

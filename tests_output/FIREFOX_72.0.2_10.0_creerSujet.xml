@@ -5,16 +5,16 @@
 
   <testsuite name="creerSujet"
     errors="0" failures="0" hostname="" id="" package="creerSujet" skipped="0"
-    tests="2" time="5.404" timestamp="">
+    tests="2" time="7.383" timestamp="">
   
-    <testcase name="Accéder au forum" classname="creerSujet" time="1.486" assertions="2">
+    <testcase name="Accéder au forum" classname="creerSujet" time="3.106" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="Créer un sujet" classname="creerSujet" time="3.918" assertions="9">
+    <testcase name="Créer un sujet" classname="creerSujet" time="4.277" assertions="9">
 
     
 

@@ -5,16 +5,16 @@
 
   <testsuite name="2creerCommentaire"
     errors="0" failures="0" hostname="" id="" package="2creerCommentaire" skipped="0"
-    tests="2" time="6.653" timestamp="">
+    tests="2" time="6.765" timestamp="">
   
-    <testcase name="Accéder au forum" classname="2creerCommentaire" time="2.449" assertions="2">
+    <testcase name="Accéder au forum" classname="2creerCommentaire" time="2.553" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="Répondre à un sujet" classname="2creerCommentaire" time="4.204" assertions="7">
+    <testcase name="Répondre à un sujet" classname="2creerCommentaire" time="4.212" assertions="7">
 
     
 

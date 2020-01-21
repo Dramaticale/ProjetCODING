@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="2">
+
+  <testsuite name="2creerCommentaire"
+    errors="0" failures="0" hostname="" id="" package="2creerCommentaire" skipped="0"
+    tests="2" time="6.663" timestamp="">
+  
+    <testcase name="Accéder au forum" classname="2creerCommentaire" time="2.489" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Répondre à un sujet" classname="2creerCommentaire" time="4.174" assertions="7">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>

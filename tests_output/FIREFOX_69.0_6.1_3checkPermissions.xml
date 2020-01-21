@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="3">
+
+  <testsuite name="3checkPermissions"
+    errors="0" failures="0" hostname="" id="" package="3checkPermissions" skipped="0"
+    tests="3" time="11.18" timestamp="">
+  
+    <testcase name="Accéder au forum" classname="3checkPermissions" time="2.479" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Check Administrateur" classname="3checkPermissions" time="4.126" assertions="13">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Check Modérateur" classname="3checkPermissions" time="4.573" assertions="8">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>

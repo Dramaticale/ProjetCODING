@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="3">
+
+  <testsuite name="4suppressions"
+    errors="0" failures="1" hostname="" id="" package="4suppressions" skipped="0"
+    tests="3" time="10.92" timestamp="">
+  
+    <testcase name="Accéder au forum" classname="4suppressions" time="2.502" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Supprimer un commentaire" classname="4suppressions" time="2.689" assertions="5">
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Supprimer un sujet" classname="4suppressions" time="5.731" assertions="5">
+
+    
+
+    
+
+    
+
+      <failure message="Expected element &lt;.no-topic&gt; text to equal: [0;33m&#34;Il n&#39;y a actuellement aucun sujet dans la sous-catégorie entraide, pourquoi ne pas être le premier à en créer un ?&#34;[0m - element was not found - expected [0;32m&#34;equal &#39;Il n&#39;y a actuellement aucun sujet dans la sous-catégorie entraide, pourquoi ne pas être le premier à en créer un ?&#39;&#34;[0m but got: [0;31m&#34;not present&#34;[0m[0;90m (5092ms)[0m">    at Object.Supprimer un sujet (C:\laragon\www\ProjetCODING\teste2e\Forum\4suppressions.js:36:24)
+    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
+
+    <failure message="    at Object.Supprimer un sujet (C:\laragon\www\ProjetCODING\teste2e\Forum\4suppressions.js:36:24)">    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>
